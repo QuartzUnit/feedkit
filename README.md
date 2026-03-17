@@ -1,5 +1,10 @@
 # FeedKit
 
+[![PyPI](https://img.shields.io/pypi/v/feedkit)](https://pypi.org/project/feedkit/)
+[![Python](https://img.shields.io/pypi/pyversions/feedkit)](https://pypi.org/project/feedkit/)
+[![License](https://img.shields.io/github/license/QuartzUnit/feedkit)](https://github.com/QuartzUnit/feedkit/blob/main/LICENSE)
+[![Tests](https://img.shields.io/badge/tests-34%20passed-brightgreen)]()
+
 > RSS/Atom feed collection with 421 curated, verified feeds. Python MCP server included.
 
 ```python
