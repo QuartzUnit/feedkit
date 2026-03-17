@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/QuartzUnit/feedkit)](https://github.com/QuartzUnit/feedkit/blob/main/LICENSE)
 [![Tests](https://img.shields.io/badge/tests-34%20passed-brightgreen)]()
 
-> RSS/Atom feed collection with 421 curated, verified feeds. Python MCP server included.
+> RSS/Atom feed collection with 417 curated, verified feeds. Python MCP server included.
 
 ```python
 from feedkit import search_catalog, fetch_feed, FeedStore
@@ -28,7 +28,7 @@ print(f"{result.new_articles} new articles")
 
 ## Features
 
-- **421 curated feeds** — tech blogs, academic, government, news, fact-check. All verified with 778K+ articles collected.
+- **417 curated feeds** — tech blogs, academic, government, news, fact-check. All verified with 778K+ articles collected.
 - **Async parallel collection** — fetch hundreds of feeds in under a minute
 - **SQLite + FTS5** — local storage with full-text search, no server needed
 - **OPML import/export** — interop with Feedly, Inoreader, NetNewsWire
@@ -72,7 +72,7 @@ feedkit-mcp  # starts stdio MCP server
 
 ## Built-in Catalog
 
-421 verified feeds across 5 categories. All audited — hard paywalls (Bloomberg, FT, WSJ) and broken URLs removed.
+417 verified feeds across 5 categories. All audited — hard paywalls (Bloomberg, FT, WSJ) and broken URLs removed.
 
 | Category | Feeds | Subcategories | Examples |
 |----------|-------|---------------|---------|
@@ -86,7 +86,7 @@ feedkit-mcp  # starts stdio MCP server
 
 | | [awesome-rss-feeds](https://github.com/plenaryapp/awesome-rss-feeds) (2.1K★) | [engineering-blogs](https://github.com/kilimchoi/engineering-blogs) (37.5K★) | **FeedKit** |
 |--|---|---|---|
-| Feeds | ~500 | ~600 | 421 |
+| Feeds | ~500 | ~600 | 417 |
 | Scope | General | Tech blogs only | Tech + Science + Finance + News + Factcheck |
 | Last content update | 2021 (stale) | 2022 (stale) | **Active (daily collection)** |
 | Verified working | No | No | **Yes (778K+ articles collected)** |
