@@ -1,0 +1,3338 @@
+[
+  {
+    "url": "https://www.cam.ac.uk/news/feed",
+    "title": "Cambridge News",
+    "category": "academia",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "www.cam.ac.uk"
+  },
+  {
+    "url": "https://blog.google/technology/ai/rss/",
+    "title": "Google AI (broader)",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "blog.google"
+  },
+  {
+    "url": "https://blog.research.google/feeds/posts/default",
+    "title": "Google AI Blog",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "blog.research.google"
+  },
+  {
+    "url": "https://deepmind.google/blog/rss.xml",
+    "title": "Google DeepMind",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "deepmind.google"
+  },
+  {
+    "url": "https://research.google/blog/rss/",
+    "title": "Google Research",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "research.google"
+  },
+  {
+    "url": "https://news.harvard.edu/gazette/feed/",
+    "title": "Harvard Gazette",
+    "category": "academia",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "news.harvard.edu"
+  },
+  {
+    "url": "https://huggingface.co/blog/feed.xml",
+    "title": "Hugging Face Blog",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "huggingface.co"
+  },
+  {
+    "url": "https://importai.substack.com/feed",
+    "title": "Import AI (Jack Clark)",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "importai.substack.com"
+  },
+  {
+    "url": "https://research.facebook.com/feed/",
+    "title": "Meta AI Research",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "research.facebook.com"
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/research/feed/",
+    "title": "Microsoft Research",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "www.microsoft.com"
+  },
+  {
+    "url": "https://openai.com/news/rss.xml",
+    "title": "OpenAI News",
+    "category": "academia",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "openai.com"
+  },
+  {
+    "url": "https://blog.oup.com/feed/",
+    "title": "Oxford University Press Blog",
+    "category": "academia",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "blog.oup.com"
+  },
+  {
+    "url": "https://hai.stanford.edu/news/rss.xml",
+    "title": "Stanford HAI",
+    "category": "academia",
+    "subcategory": "institution",
+    "language": "en",
+    "domain": "hai.stanford.edu"
+  },
+  {
+    "url": "https://www.asiae.co.kr/rss",
+    "title": "Asia Economy Daily",
+    "category": "finance",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "www.asiae.co.kr"
+  },
+  {
+    "url": "https://www.bis.org/rss/index.htm",
+    "title": "BIS (All)",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.bis.org"
+  },
+  {
+    "url": "https://data.bis.org/feed.xml",
+    "title": "BIS Statistics",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "data.bis.org"
+  },
+  {
+    "url": "https://www.bankofengland.co.uk/rss/publications",
+    "title": "BOE Publications",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.bankofengland.co.uk"
+  },
+  {
+    "url": "https://www.bankofengland.co.uk/rss/speeches",
+    "title": "BOE Speeches",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.bankofengland.co.uk"
+  },
+  {
+    "url": "https://www.bankofengland.co.uk/rss/statistics",
+    "title": "BOE Statistics",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.bankofengland.co.uk"
+  },
+  {
+    "url": "https://www.bankofcanada.ca/content_type/press/feed/",
+    "title": "Bank of Canada Press",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.bankofcanada.ca"
+  },
+  {
+    "url": "https://www.bankofengland.co.uk/rss/news",
+    "title": "Bank of England News",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.bankofengland.co.uk"
+  },
+  {
+    "url": "https://www.boj.or.jp/en/rss/whatsnew.xml",
+    "title": "Bank of Japan (EN)",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.boj.or.jp"
+  },
+  {
+    "url": "https://www.boj.or.jp/rss/whatsnew.xml",
+    "title": "Bank of Japan (JA)",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "ja",
+    "domain": "www.boj.or.jp"
+  },
+  {
+    "url": "https://bitcoinmagazine.com/feed",
+    "title": "Bitcoin Magazine",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "bitcoinmagazine.com"
+  },
+  {
+    "url": "https://blockworks.co/feed",
+    "title": "Blockworks",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "blockworks.co"
+  },
+  {
+    "url": "https://www.brookings.edu/feeds/rss/topics/economics/",
+    "title": "Brookings Economics",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "www.brookings.edu"
+  },
+  {
+    "url": "https://feeds.libsyn.com/434124/rss",
+    "title": "Brookings Podcast (BPEA)",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "feeds.libsyn.com"
+  },
+  {
+    "url": "https://www.brookings.edu/feeds/rss/research/",
+    "title": "Brookings Research",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "www.brookings.edu"
+  },
+  {
+    "url": "https://www.cftc.gov/RSS/index.htm",
+    "title": "CFTC",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.cftc.gov"
+  },
+  {
+    "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147",
+    "title": "CNBC Economy",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "search.cnbc.com"
+  },
+  {
+    "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+    "title": "CNBC Finance",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "search.cnbc.com"
+  },
+  {
+    "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15839135",
+    "title": "CNBC Investing",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "search.cnbc.com"
+  },
+  {
+    "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+    "title": "CNBC Top News",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "search.cnbc.com"
+  },
+  {
+    "url": "https://caixin.libsyn.com/rss",
+    "title": "Caixin Podcast",
+    "category": "finance",
+    "subcategory": "business",
+    "language": "en",
+    "domain": "caixin.libsyn.com"
+  },
+  {
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+    "title": "CoinDesk (All)",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "www.coindesk.com"
+  },
+  {
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?category=markets",
+    "title": "CoinDesk Markets",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "www.coindesk.com"
+  },
+  {
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?category=policy",
+    "title": "CoinDesk Policy",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "www.coindesk.com"
+  },
+  {
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/?category=tech",
+    "title": "CoinDesk Tech",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "www.coindesk.com"
+  },
+  {
+    "url": "https://cointelegraph.com/rss",
+    "title": "CoinTelegraph (All)",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "cointelegraph.com"
+  },
+  {
+    "url": "https://cointelegraph.com/rss/tag/bitcoin",
+    "title": "CoinTelegraph Bitcoin",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "cointelegraph.com"
+  },
+  {
+    "url": "https://cointelegraph.com/rss/tag/defi",
+    "title": "CoinTelegraph DeFi",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "cointelegraph.com"
+  },
+  {
+    "url": "https://cointelegraph.com/rss/tag/ethereum",
+    "title": "CoinTelegraph Ethereum",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "cointelegraph.com"
+  },
+  {
+    "url": "https://cointelegraph.com/rss/tag/regulation",
+    "title": "CoinTelegraph Regulation",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "cointelegraph.com"
+  },
+  {
+    "url": "https://cryptoslate.com/feed/",
+    "title": "CryptoSlate",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "cryptoslate.com"
+  },
+  {
+    "url": "https://dart.fss.or.kr/rss/company.do",
+    "title": "DART (Electronic Disclosure)",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "ko",
+    "domain": "dart.fss.or.kr"
+  },
+  {
+    "url": "https://feed.defillama.com/",
+    "title": "DeFi Llama Feed",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "feed.defillama.com"
+  },
+  {
+    "url": "https://decrypt.co/feed",
+    "title": "Decrypt",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "decrypt.co"
+  },
+  {
+    "url": "https://www.ecb.europa.eu/rss/fxref-usd.html",
+    "title": "ECB EUR/USD",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.ecb.europa.eu"
+  },
+  {
+    "url": "https://www.ecb.europa.eu/rss/press.html",
+    "title": "ECB Press Releases",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.ecb.europa.eu"
+  },
+  {
+    "url": "https://www.eia.gov/rss/todayinenergy.xml",
+    "title": "EIA Today in Energy",
+    "category": "finance",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.eia.gov"
+  },
+  {
+    "url": "https://www.fsa.go.jp/en/rss.html",
+    "title": "FSA Japan (EN)",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.fsa.go.jp"
+  },
+  {
+    "url": "https://www.fsa.go.jp/kouhou/rss.html",
+    "title": "FSA Japan (JA)",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "ja",
+    "domain": "www.fsa.go.jp"
+  },
+  {
+    "url": "https://www.fsc.go.kr/rss",
+    "title": "FSC Korea",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "ko",
+    "domain": "www.fsc.go.kr"
+  },
+  {
+    "url": "https://ftav.substack.com/feed",
+    "title": "FT Alphaville (Substack)",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "ftav.substack.com"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/press_bcreg.xml",
+    "title": "Fed Bank Regulation",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/press_enforcement.xml",
+    "title": "Fed Enforcement",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/h10.xml",
+    "title": "Fed H.10 (FX Rates)",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/h15.xml",
+    "title": "Fed H.15 (Interest Rates)",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+    "title": "Fed Monetary Policy",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/speeches.xml",
+    "title": "Fed Speeches",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+    "title": "Federal Reserve Press (All)",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.federalreserve.gov"
+  },
+  {
+    "url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml",
+    "title": "Financial News (FN)",
+    "category": "finance",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "www.fnnews.com"
+  },
+  {
+    "url": "https://www.forbes.com/business/feed/",
+    "title": "Forbes Business",
+    "category": "finance",
+    "subcategory": "business",
+    "language": "en",
+    "domain": "www.forbes.com"
+  },
+  {
+    "url": "https://www.forbes.com/innovation/feed/",
+    "title": "Forbes Innovation",
+    "category": "finance",
+    "subcategory": "business",
+    "language": "en",
+    "domain": "www.forbes.com"
+  },
+  {
+    "url": "https://www.hankyung.com/feed/all-news",
+    "title": "Hankyung All",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "www.hankyung.com"
+  },
+  {
+    "url": "https://www.hankyung.com/feed/economy",
+    "title": "Hankyung Economy",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "www.hankyung.com"
+  },
+  {
+    "url": "https://www.hankyung.com/feed/finance",
+    "title": "Hankyung Finance/Stocks",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "www.hankyung.com"
+  },
+  {
+    "url": "https://www.hankyung.com/feed/it",
+    "title": "Hankyung IT",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "www.hankyung.com"
+  },
+  {
+    "url": "https://www.hankyung.com/feed/realestate",
+    "title": "Hankyung Real Estate",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "www.hankyung.com"
+  },
+  {
+    "url": "https://www.imf.org/en/News/RSS",
+    "title": "IMF News",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "www.imf.org"
+  },
+  {
+    "url": "https://www.investing.com/rss/news.rss",
+    "title": "Investing.com All News",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.investing.com"
+  },
+  {
+    "url": "https://www.investing.com/rss/news_11.rss",
+    "title": "Investing.com Commodities",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.investing.com"
+  },
+  {
+    "url": "https://www.investing.com/rss/news_14.rss",
+    "title": "Investing.com Economy",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.investing.com"
+  },
+  {
+    "url": "https://www.investing.com/rss/news_1.rss",
+    "title": "Investing.com Forex",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.investing.com"
+  },
+  {
+    "url": "https://www.investing.com/rss/news_25.rss",
+    "title": "Investing.com Stock Market",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.investing.com"
+  },
+  {
+    "url": "https://www.mof.go.jp/english/about_mof/rss/index.html",
+    "title": "Japan MOF (EN)",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.mof.go.jp"
+  },
+  {
+    "url": "https://www.koreaherald.com/rss",
+    "title": "Korea Herald",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.koreaherald.com"
+  },
+  {
+    "url": "https://www.mk.co.kr/rss/30100041/",
+    "title": "Maeil Business",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "www.mk.co.kr"
+  },
+  {
+    "url": "https://file.mk.co.kr/news/rss/rss_30000001.xml",
+    "title": "Maeil Business (CDN)",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "ko",
+    "domain": "file.mk.co.kr"
+  },
+  {
+    "url": "https://back.nber.org/rss/newhc.xml",
+    "title": "NBER Working Papers",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "back.nber.org"
+  },
+  {
+    "url": "https://www.nasdaq.com/feed/rssoutbound",
+    "title": "Nasdaq News",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.nasdaq.com"
+  },
+  {
+    "url": "https://www.nasdaqtrader.com/rss.aspx?id=tradehalts",
+    "title": "Nasdaq Trading Halts",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.nasdaqtrader.com"
+  },
+  {
+    "url": "https://asia.nikkei.com/rss/feed/nar",
+    "title": "Nikkei Asia",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "asia.nikkei.com"
+  },
+  {
+    "url": "https://business.nikkei.com/rss/sns/nb.rdf",
+    "title": "Nikkei Business",
+    "category": "finance",
+    "subcategory": "business",
+    "language": "ja",
+    "domain": "business.nikkei.com"
+  },
+  {
+    "url": "https://www.piie.com/research/publications/feed",
+    "title": "Peterson Institute (PIIE)",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "www.piie.com"
+  },
+  {
+    "url": "https://www.rba.gov.au/rss/rss-cb-media-releases.xml",
+    "title": "Reserve Bank of Australia",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "www.rba.gov.au"
+  },
+  {
+    "url": "https://www.spglobal.com/spdji/en/rss/",
+    "title": "S&P Dow Jones Indices",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.spglobal.com"
+  },
+  {
+    "url": "https://www.spglobal.com/commodityinsights/en/market-insights/rss-feed",
+    "title": "S&P Global Commodity Insights",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.spglobal.com"
+  },
+  {
+    "url": "https://www.spglobal.com/market-intelligence/en/rss",
+    "title": "S&P Global Market Intelligence",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "www.spglobal.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/92/feed",
+    "title": "SCMP Business",
+    "category": "finance",
+    "subcategory": "business",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/318206/feed",
+    "title": "SCMP Economy",
+    "category": "finance",
+    "subcategory": "business",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.sec.gov/structureddata/article/announcement.rss",
+    "title": "SEC Announcements",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.sec.gov"
+  },
+  {
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=&dateb=&owner=include&count=40&search_text=&action=getcurrent&output=atom",
+    "title": "SEC EDGAR (Latest Filings)",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.sec.gov"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/xbrl-rss.xml",
+    "title": "SEC EDGAR XBRL",
+    "category": "finance",
+    "subcategory": "regulatory",
+    "language": "en",
+    "domain": "www.sec.gov"
+  },
+  {
+    "url": "https://fredblog.stlouisfed.org/feed/",
+    "title": "St. Louis Fed FRED Blog",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "fredblog.stlouisfed.org"
+  },
+  {
+    "url": "https://research.stlouisfed.org/rss/",
+    "title": "St. Louis Fed Research",
+    "category": "finance",
+    "subcategory": "central_bank",
+    "language": "en",
+    "domain": "research.stlouisfed.org"
+  },
+  {
+    "url": "https://www.theblock.co/rss.xml",
+    "title": "The Block",
+    "category": "finance",
+    "subcategory": "crypto",
+    "language": "en",
+    "domain": "www.theblock.co"
+  },
+  {
+    "url": "https://tradingeconomics.com/rss/",
+    "title": "Trading Economics",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "tradingeconomics.com"
+  },
+  {
+    "url": "https://www.worldbank.org/en/news/rss.xml",
+    "title": "World Bank News",
+    "category": "finance",
+    "subcategory": "institution",
+    "language": "en",
+    "domain": "www.worldbank.org"
+  },
+  {
+    "url": "https://elibrary.worldbank.org/page/feeds.jsp",
+    "title": "World Bank eLibrary",
+    "category": "finance",
+    "subcategory": "research",
+    "language": "en",
+    "domain": "elibrary.worldbank.org"
+  },
+  {
+    "url": "https://finance.yahoo.com/news/rssindex",
+    "title": "Yahoo Finance News",
+    "category": "finance",
+    "subcategory": "markets",
+    "language": "en",
+    "domain": "finance.yahoo.com"
+  },
+  {
+    "url": "https://rss.etoday.co.kr/eto/etoday_news_all.xml",
+    "title": "eToday",
+    "category": "finance",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.etoday.co.kr"
+  },
+  {
+    "url": "https://feeds.arstechnica.com/arstechnica/index",
+    "title": "Ars Technica (All)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "feeds.arstechnica.com"
+  },
+  {
+    "url": "https://feeds.arstechnica.com/arstechnica/science",
+    "title": "Ars Technica Science",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "feeds.arstechnica.com"
+  },
+  {
+    "url": "https://www.cell.com/cell/current.rss",
+    "title": "Cell",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.cell.com"
+  },
+  {
+    "url": "https://www.cell.com/cell/inpress.rss",
+    "title": "Cell (In Press)",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.cell.com"
+  },
+  {
+    "url": "https://www.cell.com/cell-reports/current.rss",
+    "title": "Cell Reports",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.cell.com"
+  },
+  {
+    "url": "https://cacm.acm.org/feed/",
+    "title": "Communications of the ACM",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "cacm.acm.org"
+  },
+  {
+    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+    "title": "FDA Press Releases",
+    "category": "science",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.fda.gov"
+  },
+  {
+    "url": "https://jamanetwork.com/journals/jama/pages/rss",
+    "title": "JAMA",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "jamanetwork.com"
+  },
+  {
+    "url": "https://jamanetwork.com/journals/jamainternalmedicine/pages/rss",
+    "title": "JAMA Internal Medicine",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "jamanetwork.com"
+  },
+  {
+    "url": "https://jamanetwork.com/journals/jamanetworkopen/pages/rss",
+    "title": "JAMA Network Open",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "jamanetwork.com"
+  },
+  {
+    "url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+    "title": "MIT News (AI)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "news.mit.edu"
+  },
+  {
+    "url": "https://news.mit.edu/rss/feed",
+    "title": "MIT News (All)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "news.mit.edu"
+  },
+  {
+    "url": "https://www.technologyreview.com/feed/",
+    "title": "MIT Tech Review",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.technologyreview.com"
+  },
+  {
+    "url": "https://www.cell.com/molecular-cell/current.rss",
+    "title": "Molecular Cell",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.cell.com"
+  },
+  {
+    "url": "https://www.nasa.gov/feed/",
+    "title": "NASA",
+    "category": "science",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.nasa.gov"
+  },
+  {
+    "url": "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc&feed=rss",
+    "title": "NEJM",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nejm.org"
+  },
+  {
+    "url": "https://www.nature.com/nature.rss",
+    "title": "Nature",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nbt.rss",
+    "title": "Nature Biotechnology",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nchem.rss",
+    "title": "Nature Chemistry",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nclimate.rss",
+    "title": "Nature Climate Change",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/ncomms.rss",
+    "title": "Nature Communications",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nenergy.rss",
+    "title": "Nature Energy",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/ng.rss",
+    "title": "Nature Genetics",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/natmachintell.rss",
+    "title": "Nature Machine Intelligence",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nmat.rss",
+    "title": "Nature Materials",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nm.rss",
+    "title": "Nature Medicine",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nmeth.rss",
+    "title": "Nature Methods",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nnano.rss",
+    "title": "Nature Nanotechnology",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/neuro.rss",
+    "title": "Nature Neuroscience",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://www.nature.com/nphys.rss",
+    "title": "Nature Physics",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.nature.com"
+  },
+  {
+    "url": "https://nautil.us/feed/",
+    "title": "Nautilus",
+    "category": "science",
+    "subcategory": "general",
+    "language": "en",
+    "domain": "nautil.us"
+  },
+  {
+    "url": "https://www.cell.com/neuron/current.rss",
+    "title": "Neuron",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.cell.com"
+  },
+  {
+    "url": "https://www.newscientist.com/subject/health/feed/",
+    "title": "New Scientist Health",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.newscientist.com"
+  },
+  {
+    "url": "https://www.newscientist.com/feed/home",
+    "title": "New Scientist Home",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.newscientist.com"
+  },
+  {
+    "url": "https://www.newscientist.com/subject/physics/feed/",
+    "title": "New Scientist Physics",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.newscientist.com"
+  },
+  {
+    "url": "https://journals.plos.org/plosone/feed/atom",
+    "title": "PLOS ONE",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "journals.plos.org"
+  },
+  {
+    "url": "https://www.pnas.org/action/showFeed?type=etoc&feed=rss&jc=pnas",
+    "title": "PNAS",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.pnas.org"
+  },
+  {
+    "url": "https://phys.org/rss-feed/",
+    "title": "Phys.org (All)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "phys.org"
+  },
+  {
+    "url": "https://phys.org/rss-feed/biology-news/",
+    "title": "Phys.org Biology",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "phys.org"
+  },
+  {
+    "url": "https://phys.org/rss-feed/earth-news/",
+    "title": "Phys.org Earth",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "phys.org"
+  },
+  {
+    "url": "https://phys.org/rss-feed/nanotech-news/",
+    "title": "Phys.org Nanotech",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "phys.org"
+  },
+  {
+    "url": "https://phys.org/rss-feed/physics-news/",
+    "title": "Phys.org Physics",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "phys.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/pra.xml",
+    "title": "Physical Review A",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/prb.xml",
+    "title": "Physical Review B",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/prd.xml",
+    "title": "Physical Review D",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/pre.xml",
+    "title": "Physical Review E",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/prl.xml",
+    "title": "Physical Review Letters",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/prx.xml",
+    "title": "Physical Review X",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/feed/rss.cgi?ChanKey=PubMedNews",
+    "title": "PubMed News",
+    "category": "science",
+    "subcategory": "database",
+    "language": "en",
+    "domain": "www.ncbi.nlm.nih.gov"
+  },
+  {
+    "url": "https://www.quantamagazine.org/biology/feed/",
+    "title": "Quanta Biology",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.quantamagazine.org"
+  },
+  {
+    "url": "https://www.quantamagazine.org/computer-science/feed/",
+    "title": "Quanta CS",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.quantamagazine.org"
+  },
+  {
+    "url": "https://api.quantamagazine.org/feed/",
+    "title": "Quanta Magazine (All)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "api.quantamagazine.org"
+  },
+  {
+    "url": "https://www.quantamagazine.org/mathematics/feed/",
+    "title": "Quanta Mathematics",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.quantamagazine.org"
+  },
+  {
+    "url": "https://www.quantamagazine.org/physics/feed/",
+    "title": "Quanta Physics",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.quantamagazine.org"
+  },
+  {
+    "url": "http://feeds.aps.org/rss/recent/rmp.xml",
+    "title": "Reviews of Modern Physics",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "feeds.aps.org"
+  },
+  {
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science",
+    "title": "Science",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.science.org"
+  },
+  {
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=sciadv",
+    "title": "Science Advances",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.science.org"
+  },
+  {
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=sciimmunol",
+    "title": "Science Immunology",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.science.org"
+  },
+  {
+    "url": "https://www.science.org/rss/news_current.xml",
+    "title": "Science News (AAAS)",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.science.org"
+  },
+  {
+    "url": "https://www.sciencenews.org/feed",
+    "title": "Science News (sciencenews.org)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencenews.org"
+  },
+  {
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=scirobotics",
+    "title": "Science Robotics",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.science.org"
+  },
+  {
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=stm",
+    "title": "Science Translational Medicine",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.science.org"
+  },
+  {
+    "url": "https://www.sciencedaily.com/rss/all.xml",
+    "title": "ScienceDaily (All)",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencedaily.com"
+  },
+  {
+    "url": "https://www.sciencedaily.com/rss/computers_math.xml",
+    "title": "ScienceDaily Computers & Math",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencedaily.com"
+  },
+  {
+    "url": "https://www.sciencedaily.com/rss/health_medicine.xml",
+    "title": "ScienceDaily Health & Medicine",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencedaily.com"
+  },
+  {
+    "url": "https://www.sciencedaily.com/rss/matter_energy.xml",
+    "title": "ScienceDaily Matter & Energy",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencedaily.com"
+  },
+  {
+    "url": "https://www.sciencedaily.com/rss/mind_brain.xml",
+    "title": "ScienceDaily Mind & Brain",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencedaily.com"
+  },
+  {
+    "url": "https://www.sciencedaily.com/rss/space_time.xml",
+    "title": "ScienceDaily Space & Time",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.sciencedaily.com"
+  },
+  {
+    "url": "http://rss.sciam.com/ScientificAmerican-Global",
+    "title": "Scientific American Global",
+    "category": "science",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "rss.sciam.com"
+  },
+  {
+    "url": "https://www.smithsonianmag.com/rss/latest_articles/",
+    "title": "Smithsonian Magazine",
+    "category": "science",
+    "subcategory": "general",
+    "language": "en",
+    "domain": "www.smithsonianmag.com"
+  },
+  {
+    "url": "https://www.thelancet.com/rssfeed/lancet_current.xml",
+    "title": "The Lancet",
+    "category": "science",
+    "subcategory": "journal",
+    "language": "en",
+    "domain": "www.thelancet.com"
+  },
+  {
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.atom",
+    "title": "USGS Earthquakes (Significant)",
+    "category": "science",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "earthquake.usgs.gov"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/astro-ph",
+    "title": "arXiv astro-ph",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cond-mat",
+    "title": "arXiv cond-mat",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs",
+    "title": "arXiv cs (All)",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs.AI",
+    "title": "arXiv cs.AI",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs.CL",
+    "title": "arXiv cs.CL",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs.CR",
+    "title": "arXiv cs.CR",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs.CV",
+    "title": "arXiv cs.CV",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs.LG",
+    "title": "arXiv cs.LG",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/cs.RO",
+    "title": "arXiv cs.RO",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/econ",
+    "title": "arXiv econ",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/eess",
+    "title": "arXiv eess",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/gr-qc",
+    "title": "arXiv gr-qc",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/hep-ph",
+    "title": "arXiv hep-ph",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/hep-th",
+    "title": "arXiv hep-th",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/math",
+    "title": "arXiv math",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/math-ph",
+    "title": "arXiv math-ph",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/nlin",
+    "title": "arXiv nlin",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/nucl-ex",
+    "title": "arXiv nucl-ex",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/nucl-th",
+    "title": "arXiv nucl-th",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/physics",
+    "title": "arXiv physics",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/q-bio",
+    "title": "arXiv q-bio",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/q-fin",
+    "title": "arXiv q-fin",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/quant-ph",
+    "title": "arXiv quant-ph",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/stat",
+    "title": "arXiv stat",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "https://rss.arxiv.org/rss/stat.ML",
+    "title": "arXiv stat.ML",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "rss.arxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=all",
+    "title": "bioRxiv All",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=animal_behavior_and_cognition",
+    "title": "bioRxiv Animal Behavior & Cognition",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=biochemistry",
+    "title": "bioRxiv Biochemistry",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=bioinformatics",
+    "title": "bioRxiv Bioinformatics",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=biophysics",
+    "title": "bioRxiv Biophysics",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=cancer_biology",
+    "title": "bioRxiv Cancer Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=cell_biology",
+    "title": "bioRxiv Cell Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=developmental_biology",
+    "title": "bioRxiv Developmental Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=ecology",
+    "title": "bioRxiv Ecology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=evolutionary_biology",
+    "title": "bioRxiv Evolutionary Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=genetics",
+    "title": "bioRxiv Genetics",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=genomics",
+    "title": "bioRxiv Genomics",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=immunology",
+    "title": "bioRxiv Immunology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=microbiology",
+    "title": "bioRxiv Microbiology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=molecular_biology",
+    "title": "bioRxiv Molecular Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=neuroscience",
+    "title": "bioRxiv Neuroscience",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=pathology",
+    "title": "bioRxiv Pathology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=pharmacology_and_toxicology",
+    "title": "bioRxiv Pharmacology & Toxicology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=physiology",
+    "title": "bioRxiv Physiology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=plant_biology",
+    "title": "bioRxiv Plant Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=scientific_communication_and_education",
+    "title": "bioRxiv Scientific Communication",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=synthetic_biology",
+    "title": "bioRxiv Synthetic Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=systems_biology",
+    "title": "bioRxiv Systems Biology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.biorxiv.org/biorxiv_xml.php?subject=zoology",
+    "title": "bioRxiv Zoology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.biorxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=all",
+    "title": "medRxiv All",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=cardiovascular_medicine",
+    "title": "medRxiv Cardiovascular Medicine",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=epidemiology",
+    "title": "medRxiv Epidemiology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=infectious_diseases",
+    "title": "medRxiv Infectious Diseases",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=oncology",
+    "title": "medRxiv Oncology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=psychiatry_and_clinical_psychology",
+    "title": "medRxiv Psychiatry & Clinical Psychology",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "http://connect.medrxiv.org/medrxiv_xml.php?subject=public_and_global_health",
+    "title": "medRxiv Public & Global Health",
+    "category": "science",
+    "subcategory": "preprint",
+    "language": "en",
+    "domain": "connect.medrxiv.org"
+  },
+  {
+    "url": "https://www.aei.org/feed/",
+    "title": "AEI",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "www.aei.org"
+  },
+  {
+    "url": "https://aeon.co/feed",
+    "title": "Aeon",
+    "category": "society",
+    "subcategory": "general",
+    "language": "en",
+    "domain": "aeon.co"
+  },
+  {
+    "url": "https://www.aljazeera.com/xml/rss/all.xml",
+    "title": "Al Jazeera (All)",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.aljazeera.com"
+  },
+  {
+    "url": "https://api.axios.com/feed/",
+    "title": "Axios",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "api.axios.com"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/politics/rss.xml",
+    "title": "BBC Politics",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "feeds.bbci.co.uk"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+    "title": "BBC Science",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "feeds.bbci.co.uk"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "title": "BBC Technology",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "feeds.bbci.co.uk"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/rss.xml",
+    "title": "BBC Top Stories",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "feeds.bbci.co.uk"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/uk/rss.xml",
+    "title": "BBC UK",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "feeds.bbci.co.uk"
+  },
+  {
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "title": "BBC World",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "feeds.bbci.co.uk"
+  },
+  {
+    "url": "https://www.bls.gov/feed/empsit.rss",
+    "title": "BLS Employment",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.bls.gov"
+  },
+  {
+    "url": "https://www.bls.gov/feed/bls_latest.rss",
+    "title": "BLS Latest",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.bls.gov"
+  },
+  {
+    "url": "https://www.brookings.edu/feed/",
+    "title": "Brookings (General)",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "www.brookings.edu"
+  },
+  {
+    "url": "https://www.cgtn.com/subscribe/rss.html",
+    "title": "CGTN",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.cgtn.com"
+  },
+  {
+    "url": "http://rss.cnn.com/rss/cnn_allpolitics.rss",
+    "title": "CNN Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.cnn.com"
+  },
+  {
+    "url": "http://rss.cnn.com/rss/edition.rss",
+    "title": "CNN Top (International)",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.cnn.com"
+  },
+  {
+    "url": "http://rss.cnn.com/rss/cnn_us.rss",
+    "title": "CNN US",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.cnn.com"
+  },
+  {
+    "url": "http://rss.cnn.com/rss/cnn_world.rss",
+    "title": "CNN World",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.cnn.com"
+  },
+  {
+    "url": "https://carnegieendowment.org/rss/",
+    "title": "Carnegie Endowment",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "carnegieendowment.org"
+  },
+  {
+    "url": "https://www.cato.org/rss/recent-commentary",
+    "title": "Cato Institute Commentary",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "www.cato.org"
+  },
+  {
+    "url": "https://www.cato.org/rss/recent-opeds",
+    "title": "Cato Institute Recent Op-Eds",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "www.cato.org"
+  },
+  {
+    "url": "https://www.cato.org/rss/recent-studies",
+    "title": "Cato Institute Recent Studies",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "www.cato.org"
+  },
+  {
+    "url": "https://usa.chinadaily.com.cn/rss.html",
+    "title": "China Daily (US)",
+    "category": "society",
+    "subcategory": "news_zh",
+    "language": "en",
+    "domain": "usa.chinadaily.com.cn"
+  },
+  {
+    "url": "https://rss.dw.com/rdf/rss-en-all",
+    "title": "DW All (EN)",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "rss.dw.com"
+  },
+  {
+    "url": "https://rss.dw.com/rdf/rss-en-asia",
+    "title": "DW Asia",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "rss.dw.com"
+  },
+  {
+    "url": "https://rss.dw.com/rdf/rss-en-top",
+    "title": "DW Top Stories",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "rss.dw.com"
+  },
+  {
+    "url": "https://rss.donga.com/total.xml",
+    "title": "Donga Ilbo (All)",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.donga.com"
+  },
+  {
+    "url": "https://rss.donga.com/economy.xml",
+    "title": "Donga Ilbo Economy",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.donga.com"
+  },
+  {
+    "url": "https://rss.donga.com/national.xml",
+    "title": "Donga Ilbo National",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.donga.com"
+  },
+  {
+    "url": "https://rss.donga.com/politics.xml",
+    "title": "Donga Ilbo Politics",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.donga.com"
+  },
+  {
+    "url": "https://ecfr.eu/feeds/",
+    "title": "ECFR",
+    "category": "society",
+    "subcategory": "think_tank",
+    "language": "en",
+    "domain": "ecfr.eu"
+  },
+  {
+    "url": "https://www.factcheck.org/feed/",
+    "title": "FactCheck.org",
+    "category": "society",
+    "subcategory": "factcheck",
+    "language": "en",
+    "domain": "www.factcheck.org"
+  },
+  {
+    "url": "https://www.foreignaffairs.com/rss.xml",
+    "title": "Foreign Affairs",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.foreignaffairs.com"
+  },
+  {
+    "url": "https://foreignpolicy.com/feed/",
+    "title": "Foreign Policy",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "foreignpolicy.com"
+  },
+  {
+    "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+    "title": "Fox News Latest",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "moxie.foxnews.com"
+  },
+  {
+    "url": "https://moxie.foxnews.com/google-publisher/opinion.xml",
+    "title": "Fox News Opinion",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "moxie.foxnews.com"
+  },
+  {
+    "url": "https://moxie.foxnews.com/google-publisher/politics.xml",
+    "title": "Fox News Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "moxie.foxnews.com"
+  },
+  {
+    "url": "https://moxie.foxnews.com/google-publisher/us.xml",
+    "title": "Fox News US",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "moxie.foxnews.com"
+  },
+  {
+    "url": "https://moxie.foxnews.com/google-publisher/world.xml",
+    "title": "Fox News World",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "moxie.foxnews.com"
+  },
+  {
+    "url": "https://www.france24.com/en/rss",
+    "title": "France24 (EN)",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.france24.com"
+  },
+  {
+    "url": "https://www.france24.com/en/europe/rss",
+    "title": "France24 Europe",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.france24.com"
+  },
+  {
+    "url": "https://fullfact.org/feed/",
+    "title": "Full Fact",
+    "category": "society",
+    "subcategory": "factcheck",
+    "language": "en",
+    "domain": "fullfact.org"
+  },
+  {
+    "url": "https://www.gov.uk/search/news-and-communications.atom",
+    "title": "GOV.UK Announcements",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.gov.uk"
+  },
+  {
+    "url": "https://www.govinfo.gov/rss/fr.xml",
+    "title": "GovInfo",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.govinfo.gov"
+  },
+  {
+    "url": "https://www.theguardian.com/uk/commentisfree/rss",
+    "title": "Guardian Opinion",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.theguardian.com/politics/rss",
+    "title": "Guardian Politics",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.theguardian.com/science/rss",
+    "title": "Guardian Science",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.theguardian.com/technology/rss",
+    "title": "Guardian Technology",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.theguardian.com/uk-news/rss",
+    "title": "Guardian UK News",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.theguardian.com/us-news/rss",
+    "title": "Guardian US News",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.theguardian.com/world/rss",
+    "title": "Guardian World",
+    "category": "society",
+    "subcategory": "news_uk",
+    "language": "en",
+    "domain": "www.theguardian.com"
+  },
+  {
+    "url": "https://www.hani.co.kr/rss/",
+    "title": "Hankyoreh",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "www.hani.co.kr"
+  },
+  {
+    "url": "https://fs.jtbc.co.kr/RSS/newsflash.xml",
+    "title": "JTBC Newsflash",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "fs.jtbc.co.kr"
+  },
+  {
+    "url": "https://www.japantimes.co.jp/feed/",
+    "title": "Japan Times (EN)",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.japantimes.co.jp"
+  },
+  {
+    "url": "https://rss.joins.com/joins_news_list.xml",
+    "title": "JoongAng Ilbo",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.joins.com"
+  },
+  {
+    "url": "http://world.kbs.co.kr/rss/rss_news.htm?lang=k",
+    "title": "KBS World (Korean)",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "world.kbs.co.kr"
+  },
+  {
+    "url": "https://www.koreaherald.com/rss/010000000000.xml",
+    "title": "Korea Herald (National)",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "en",
+    "domain": "www.koreaherald.com"
+  },
+  {
+    "url": "https://www.korea.kr/rss/policy.xml",
+    "title": "Korea Policy Briefing",
+    "category": "society",
+    "subcategory": "government",
+    "language": "ko",
+    "domain": "www.korea.kr"
+  },
+  {
+    "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+    "title": "Kyunghyang Shinmun (All)",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "www.khan.co.kr"
+  },
+  {
+    "url": "https://imnews.imbc.com/rss/google_news/narrativeNews.rss",
+    "title": "MBC Narrative News",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "imnews.imbc.com"
+  },
+  {
+    "url": "https://imnews.imbc.com/rss/news/news_00.xml",
+    "title": "MBC News (All)",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "imnews.imbc.com"
+  },
+  {
+    "url": "https://www.imaeil.com/rss",
+    "title": "Maeil Business (Daegu)",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "www.imaeil.com"
+  },
+  {
+    "url": "https://mainichi.jp/rss/etc/mainichi.rss",
+    "title": "Mainichi Shimbun",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "mainichi.jp"
+  },
+  {
+    "url": "http://feeds.nbcnews.com/feeds/nbcpolitics",
+    "title": "NBC/MSNBC Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.nbcnews.com"
+  },
+  {
+    "url": "http://feeds.nbcnews.com/feeds/worldnews",
+    "title": "NBC/MSNBC World",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.nbcnews.com"
+  },
+  {
+    "url": "https://www.stats.gov.cn/english/PressRelease/rss.xml",
+    "title": "NBS China (EN)",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.stats.gov.cn"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat7.xml",
+    "title": "NHK Culture/Entertainment",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat4.xml",
+    "title": "NHK Economy",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat5.xml",
+    "title": "NHK International",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+    "title": "NHK Main",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat3.xml",
+    "title": "NHK Politics",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat2.xml",
+    "title": "NHK Science/Medical",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat1.xml",
+    "title": "NHK Society",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://www3.nhk.or.jp/rss/news/cat6.xml",
+    "title": "NHK Sports",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "www3.nhk.or.jp"
+  },
+  {
+    "url": "https://feeds.npr.org/1003/rss.xml",
+    "title": "NPR National",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.npr.org"
+  },
+  {
+    "url": "https://feeds.npr.org/1001/rss.xml",
+    "title": "NPR News",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.npr.org"
+  },
+  {
+    "url": "https://feeds.npr.org/1014/rss.xml",
+    "title": "NPR Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.npr.org"
+  },
+  {
+    "url": "https://feeds.npr.org/1004/rss.xml",
+    "title": "NPR World",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.npr.org"
+  },
+  {
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "title": "NYT Business",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.nytimes.com"
+  },
+  {
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "title": "NYT Homepage",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.nytimes.com"
+  },
+  {
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "title": "NYT Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.nytimes.com"
+  },
+  {
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+    "title": "NYT US",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.nytimes.com"
+  },
+  {
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "title": "NYT World",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.nytimes.com"
+  },
+  {
+    "url": "https://rss.nocutnews.co.kr/nocutnews.xml",
+    "title": "Nocut News",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.nocutnews.co.kr"
+  },
+  {
+    "url": "http://rss.ohmynews.com/rss/ohmynews.xml",
+    "title": "OhmyNews",
+    "category": "society",
+    "subcategory": "news_ko",
+    "language": "ko",
+    "domain": "rss.ohmynews.com"
+  },
+  {
+    "url": "https://www.pbs.org/newshour/feeds/rss/headlines",
+    "title": "PBS NewsHour Headlines",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "www.pbs.org"
+  },
+  {
+    "url": "https://www.pbs.org/newshour/feeds/rss/politics",
+    "title": "PBS NewsHour Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "www.pbs.org"
+  },
+  {
+    "url": "https://www.politifact.com/rss/all/",
+    "title": "PolitiFact (All)",
+    "category": "society",
+    "subcategory": "factcheck",
+    "language": "en",
+    "domain": "www.politifact.com"
+  },
+  {
+    "url": "https://www.politifact.com/rss/factchecks/",
+    "title": "PolitiFact (Fact Checks)",
+    "category": "society",
+    "subcategory": "factcheck",
+    "language": "en",
+    "domain": "www.politifact.com"
+  },
+  {
+    "url": "https://rss.politico.com/congress.xml",
+    "title": "Politico Congress",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.politico.com"
+  },
+  {
+    "url": "https://rss.politico.com/defense.xml",
+    "title": "Politico Defense",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.politico.com"
+  },
+  {
+    "url": "https://rss.politico.com/politics-news.xml",
+    "title": "Politico Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "rss.politico.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/4/feed",
+    "title": "SCMP China",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/2/feed",
+    "title": "SCMP HK",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/91/feed",
+    "title": "SCMP News",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/36/feed",
+    "title": "SCMP Tech",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.scmp.com/rss/5/feed",
+    "title": "SCMP World",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "www.scmp.com"
+  },
+  {
+    "url": "https://www.snopes.com/feed/",
+    "title": "Snopes",
+    "category": "society",
+    "subcategory": "factcheck",
+    "language": "en",
+    "domain": "www.snopes.com"
+  },
+  {
+    "url": "https://www.theatlantic.com/feed/all/",
+    "title": "The Atlantic",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "www.theatlantic.com"
+  },
+  {
+    "url": "https://thediplomat.com/feed/",
+    "title": "The Diplomat",
+    "category": "society",
+    "subcategory": "news_intl",
+    "language": "en",
+    "domain": "thediplomat.com"
+  },
+  {
+    "url": "https://www.newyorker.com/feed/news",
+    "title": "The New Yorker",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "www.newyorker.com"
+  },
+  {
+    "url": "https://www.nationalarchives.gov.uk/rss/news.xml",
+    "title": "UK National Archives",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.nationalarchives.gov.uk"
+  },
+  {
+    "url": "https://www.parliament.uk/g/RSS/news-and-press/",
+    "title": "UK Parliament",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.parliament.uk"
+  },
+  {
+    "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+    "title": "UN News (EN)",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "news.un.org"
+  },
+  {
+    "url": "https://news.un.org/feed/subscribe/zh/news/all/rss.xml",
+    "title": "UN News (ZH)",
+    "category": "society",
+    "subcategory": "government",
+    "language": "zh",
+    "domain": "news.un.org"
+  },
+  {
+    "url": "https://rss.upi.com/news/top_news.rss",
+    "title": "UPI Top News",
+    "category": "society",
+    "subcategory": "wire",
+    "language": "en",
+    "domain": "rss.upi.com"
+  },
+  {
+    "url": "https://rss.upi.com/news/tn_us.rss",
+    "title": "UPI US News",
+    "category": "society",
+    "subcategory": "wire",
+    "language": "en",
+    "domain": "rss.upi.com"
+  },
+  {
+    "url": "https://rss.upi.com/news/tn_int.rss",
+    "title": "UPI World News",
+    "category": "society",
+    "subcategory": "wire",
+    "language": "en",
+    "domain": "rss.upi.com"
+  },
+  {
+    "url": "https://www.census.gov/economic-indicators/indicator.xml",
+    "title": "US Census Economic Indicators",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.census.gov"
+  },
+  {
+    "url": "https://www.census.gov/content/census/en/newsroom/press-releases.xml",
+    "title": "US Census Press",
+    "category": "society",
+    "subcategory": "government",
+    "language": "en",
+    "domain": "www.census.gov"
+  },
+  {
+    "url": "https://www.vox.com/rss/index.xml",
+    "title": "Vox",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "www.vox.com"
+  },
+  {
+    "url": "https://feeds.washingtonpost.com/rss/national",
+    "title": "WaPo National",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.washingtonpost.com"
+  },
+  {
+    "url": "https://feeds.washingtonpost.com/rss/opinions",
+    "title": "WaPo Opinions",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.washingtonpost.com"
+  },
+  {
+    "url": "https://feeds.washingtonpost.com/rss/politics",
+    "title": "WaPo Politics",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.washingtonpost.com"
+  },
+  {
+    "url": "https://feeds.washingtonpost.com/rss/world",
+    "title": "WaPo World",
+    "category": "society",
+    "subcategory": "news_us",
+    "language": "en",
+    "domain": "feeds.washingtonpost.com"
+  },
+  {
+    "url": "http://www.xinhuanet.com/english/rss/index.htm",
+    "title": "Xinhua (EN)",
+    "category": "society",
+    "subcategory": "wire",
+    "language": "en",
+    "domain": "www.xinhuanet.com"
+  },
+  {
+    "url": "https://news.yahoo.co.jp/rss/topics/top-picks.xml",
+    "title": "Yahoo! News JP",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "ja",
+    "domain": "news.yahoo.co.jp"
+  },
+  {
+    "url": "https://japannews.yomiuri.co.jp/feed/",
+    "title": "Yomiuri (EN: Japan News)",
+    "category": "society",
+    "subcategory": "news_ja",
+    "language": "en",
+    "domain": "japannews.yomiuri.co.jp"
+  },
+  {
+    "url": "https://en.yna.co.kr/RSS/news.xml",
+    "title": "Yonhap (EN)",
+    "category": "society",
+    "subcategory": "wire",
+    "language": "en",
+    "domain": "en.yna.co.kr"
+  },
+  {
+    "url": "https://www.aitimes.com/rss/allArticle.xml",
+    "title": "AI Times",
+    "category": "technology",
+    "subcategory": "ai",
+    "language": "ko",
+    "domain": "www.aitimes.com"
+  },
+  {
+    "url": "https://www.aitimes.kr/rss/allArticle.xml",
+    "title": "AI Times KR",
+    "category": "technology",
+    "subcategory": "ai",
+    "language": "ko",
+    "domain": "www.aitimes.kr"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/aws/feed/",
+    "title": "AWS Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "aws.amazon.com"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+    "title": "AWS Machine Learning Blog",
+    "category": "technology",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "aws.amazon.com"
+  },
+  {
+    "url": "https://medium.com/feed/airbnb-engineering",
+    "title": "Airbnb Engineering",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "medium.com"
+  },
+  {
+    "url": "https://bair.berkeley.edu/blog/feed.xml",
+    "title": "BAIR Blog (Berkeley AI Research)",
+    "category": "technology",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "bair.berkeley.edu"
+  },
+  {
+    "url": "https://www.boannews.com/media/news_rss.xml",
+    "title": "BoanNews",
+    "category": "technology",
+    "subcategory": "security",
+    "language": "ko",
+    "domain": "www.boannews.com"
+  },
+  {
+    "url": "https://byline.network/feed/",
+    "title": "Byline Network",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "byline.network"
+  },
+  {
+    "url": "https://changelog.com/feed",
+    "title": "Changelog (News)",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "changelog.com"
+  },
+  {
+    "url": "https://blog.cloudflare.com/rss/",
+    "title": "Cloudflare Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "blog.cloudflare.com"
+  },
+  {
+    "url": "https://www.dailysecu.com/rss/allArticle.xml",
+    "title": "DailySecu",
+    "category": "technology",
+    "subcategory": "security",
+    "language": "ko",
+    "domain": "www.dailysecu.com"
+  },
+  {
+    "url": "https://dev.to/feed",
+    "title": "Dev.to",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "dev.to"
+  },
+  {
+    "url": "https://discord.com/blog/rss.xml",
+    "title": "Discord Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "discord.com"
+  },
+  {
+    "url": "https://distill.pub/rss.xml",
+    "title": "Distill",
+    "category": "technology",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "distill.pub"
+  },
+  {
+    "url": "https://dropbox.tech/feed",
+    "title": "Dropbox Tech Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "dropbox.tech"
+  },
+  {
+    "url": "http://rss.etnews.com/04046.xml",
+    "title": "ETNews AI",
+    "category": "technology",
+    "subcategory": "ai",
+    "language": "ko",
+    "domain": "rss.etnews.com"
+  },
+  {
+    "url": "http://rss.etnews.com/Section901.xml",
+    "title": "ETNews IT",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "rss.etnews.com"
+  },
+  {
+    "url": "https://www.engadget.com/rss.xml",
+    "title": "Engadget",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "www.engadget.com"
+  },
+  {
+    "url": "https://github.blog/feed/",
+    "title": "GitHub Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "github.blog"
+  },
+  {
+    "url": "https://go.dev/blog/feed.atom",
+    "title": "Go Blog",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "go.dev"
+  },
+  {
+    "url": "https://golangweekly.com/rss/",
+    "title": "Golang Weekly",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "golangweekly.com"
+  },
+  {
+    "url": "https://news.ycombinator.com/rss",
+    "title": "HN (Official)",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "news.ycombinator.com"
+  },
+  {
+    "url": "https://hnrss.org/frontpage",
+    "title": "HN (hnrss.org)",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "hnrss.org"
+  },
+  {
+    "url": "https://spectrum.ieee.org/feeds/feed.rss",
+    "title": "IEEE Spectrum",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "spectrum.ieee.org"
+  },
+  {
+    "url": "https://it.chosun.com/rss/allArticle.xml",
+    "title": "IT Chosun",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "it.chosun.com"
+  },
+  {
+    "url": "https://www.itworld.co.kr/rss",
+    "title": "ITWorld Korea",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "www.itworld.co.kr"
+  },
+  {
+    "url": "https://feed.infoq.com/",
+    "title": "InfoQ",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "feed.infoq.com"
+  },
+  {
+    "url": "https://javascriptweekly.com/rss/",
+    "title": "JavaScript Weekly",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "javascriptweekly.com"
+  },
+  {
+    "url": "https://kubernetes.io/feed.xml",
+    "title": "Kubernetes Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "kubernetes.io"
+  },
+  {
+    "url": "https://lexfridman.com/feed/podcast/",
+    "title": "Lex Fridman Podcast",
+    "category": "technology",
+    "subcategory": "podcast",
+    "language": "en",
+    "domain": "lexfridman.com"
+  },
+  {
+    "url": "https://lobste.rs/rss",
+    "title": "Lobsters",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "lobste.rs"
+  },
+  {
+    "url": "https://machinelearningmastery.com/blog/feed",
+    "title": "Machine Learning Mastery",
+    "category": "technology",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "machinelearningmastery.com"
+  },
+  {
+    "url": "https://medium.com/feed/topic/programming",
+    "title": "Medium (Tech)",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "medium.com"
+  },
+  {
+    "url": "https://engineering.fb.com/feed/",
+    "title": "Meta Engineering",
+    "category": "technology",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "engineering.fb.com"
+  },
+  {
+    "url": "http://rss.mt.co.kr/mt_news.xml",
+    "title": "MoneyToday",
+    "category": "technology",
+    "subcategory": "general",
+    "language": "ko",
+    "domain": "rss.mt.co.kr"
+  },
+  {
+    "url": "https://blog.mozilla.org/en/feed/",
+    "title": "Mozilla Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "blog.mozilla.org"
+  },
+  {
+    "url": "https://hacks.mozilla.org/feed/",
+    "title": "Mozilla Hacks",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "hacks.mozilla.org"
+  },
+  {
+    "url": "https://medium.com/feed/netflix-techblog",
+    "title": "Netflix Tech Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "medium.com"
+  },
+  {
+    "url": "https://www.newsis.com/RSS/health.xml",
+    "title": "Newsis IT Bio",
+    "category": "technology",
+    "subcategory": "it_bio",
+    "language": "ko",
+    "domain": "www.newsis.com"
+  },
+  {
+    "url": "https://nodeweekly.com/rss/",
+    "title": "Node Weekly",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "nodeweekly.com"
+  },
+  {
+    "url": "https://platum.kr/feed",
+    "title": "Platum",
+    "category": "technology",
+    "subcategory": "startup",
+    "language": "ko",
+    "domain": "platum.kr"
+  },
+  {
+    "url": "https://pycoders.com/feed",
+    "title": "PyCoder's Weekly",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "pycoders.com"
+  },
+  {
+    "url": "https://blog.python.org/feeds/posts/default",
+    "title": "Python Insider",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "blog.python.org"
+  },
+  {
+    "url": "https://peps.python.org/peps.rss",
+    "title": "Python PEPs",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "peps.python.org"
+  },
+  {
+    "url": "https://blog.rust-lang.org/feed.xml",
+    "title": "Rust Blog",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "blog.rust-lang.org"
+  },
+  {
+    "url": "https://slack.engineering/feed/",
+    "title": "Slack Engineering",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "slack.engineering"
+  },
+  {
+    "url": "http://rss.slashdot.org/Slashdot/slashdotMain",
+    "title": "Slashdot",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "rss.slashdot.org"
+  },
+  {
+    "url": "https://engineering.atspotify.com/feed/",
+    "title": "Spotify Engineering",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "engineering.atspotify.com"
+  },
+  {
+    "url": "https://stackoverflow.blog/feed",
+    "title": "Stack Overflow Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "stackoverflow.blog"
+  },
+  {
+    "url": "https://stripe.com/blog/feed.rss",
+    "title": "Stripe Blog",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "stripe.com"
+  },
+  {
+    "url": "https://feed.syntax.fm/rss",
+    "title": "Syntax FM",
+    "category": "technology",
+    "subcategory": "podcast",
+    "language": "en",
+    "domain": "feed.syntax.fm"
+  },
+  {
+    "url": "https://www.tech42.co.kr/feed",
+    "title": "Tech42",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "www.tech42.co.kr"
+  },
+  {
+    "url": "https://techcrunch.com/feed/",
+    "title": "TechCrunch",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "techcrunch.com"
+  },
+  {
+    "url": "https://www.techm.kr/rss/allArticle.xml",
+    "title": "TechM",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "www.techm.kr"
+  },
+  {
+    "url": "https://techrecipe.co.kr/feed",
+    "title": "TechRecipe",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "techrecipe.co.kr"
+  },
+  {
+    "url": "https://changelog.com/podcast/feed",
+    "title": "The Changelog",
+    "category": "technology",
+    "subcategory": "podcast",
+    "language": "en",
+    "domain": "changelog.com"
+  },
+  {
+    "url": "https://thenewstack.io/feed/",
+    "title": "The New Stack",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "thenewstack.io"
+  },
+  {
+    "url": "https://www.theregister.com/headlines.atom",
+    "title": "The Register",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "www.theregister.com"
+  },
+  {
+    "url": "https://www.theverge.com/rss/index.xml",
+    "title": "The Verge",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "www.theverge.com"
+  },
+  {
+    "url": "https://this-week-in-rust.org/atom.xml",
+    "title": "This Week in Rust",
+    "category": "technology",
+    "subcategory": "language",
+    "language": "en",
+    "domain": "this-week-in-rust.org"
+  },
+  {
+    "url": "https://tildes.net/topics.rss",
+    "title": "Tildes",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "en",
+    "domain": "tildes.net"
+  },
+  {
+    "url": "https://www.v2ex.com/feed/programmer.xml",
+    "title": "V2EX",
+    "category": "technology",
+    "subcategory": "developer",
+    "language": "zh",
+    "domain": "www.v2ex.com"
+  },
+  {
+    "url": "https://www.venturesquare.net/feed",
+    "title": "VentureSquare",
+    "category": "technology",
+    "subcategory": "startup",
+    "language": "ko",
+    "domain": "www.venturesquare.net"
+  },
+  {
+    "url": "https://www.wired.com/feed/rss",
+    "title": "Wired",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "www.wired.com"
+  },
+  {
+    "url": "http://feeds.feedburner.com/zdkorea",
+    "title": "ZDNet Korea",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "feeds.feedburner.com"
+  },
+  {
+    "url": "https://www.zdnet.com/news/rss.xml",
+    "title": "ZDNet News",
+    "category": "technology",
+    "subcategory": "tech_news",
+    "language": "en",
+    "domain": "www.zdnet.com"
+  },
+  {
+    "url": "https://www.fast.ai/index.xml",
+    "title": "fast.ai",
+    "category": "technology",
+    "subcategory": "ai_ml",
+    "language": "en",
+    "domain": "www.fast.ai"
+  },
+  {
+    "url": "https://rss.inews24.com/rss/news_it.xml",
+    "title": "iNews24 IT",
+    "category": "technology",
+    "subcategory": "it_news",
+    "language": "ko",
+    "domain": "rss.inews24.com"
+  }
+]

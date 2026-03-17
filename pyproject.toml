@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feedkit"
+version = "0.1.0"
+description = "RSS/Atom feed collection with 421 curated feeds. Python MCP server included."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "QuartzUnit" }]
+keywords = ["rss", "atom", "feed", "news", "mcp", "collection", "catalog"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "feedparser>=6.0",
+    "httpx>=0.27",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+opml = ["listparser>=0.20"]
+mcp = ["fastmcp>=2.0"]
+all = ["feedkit[opml,mcp]"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "ruff>=0.9"]
+
+[project.scripts]
+feedkit = "feedkit.__main__:main"
+feedkit-mcp = "feedkit.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/QuartzUnit/feedkit"
+Repository = "https://github.com/QuartzUnit/feedkit"
+Issues = "https://github.com/QuartzUnit/feedkit/issues"
+
+[tool.setuptools.package-data]
+feedkit = ["data/*.json"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
