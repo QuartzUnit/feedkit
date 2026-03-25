@@ -3334,5 +3334,221 @@
     "subcategory": "it_news",
     "language": "ko",
     "domain": "rss.inews24.com"
+  },
+  {
+    "url": "https://www.petmd.com/feed",
+    "title": "PetMD",
+    "category": "pets",
+    "subcategory": "health",
+    "language": "en",
+    "domain": "www.petmd.com"
+  },
+  {
+    "url": "https://www.dogster.com/feed",
+    "title": "Dogster",
+    "category": "pets",
+    "subcategory": "magazine",
+    "language": "en",
+    "domain": "www.dogster.com"
+  },
+  {
+    "url": "https://www.catster.com/feed/",
+    "title": "Catster",
+    "category": "pets",
+    "subcategory": "magazine",
+    "language": "en",
+    "domain": "www.catster.com"
+  },
+  {
+    "url": "https://iheartdogs.com/feed/",
+    "title": "iHeartDogs",
+    "category": "pets",
+    "subcategory": "blog",
+    "language": "en",
+    "domain": "iheartdogs.com"
+  },
+  {
+    "url": "https://iheartcats.com/feed/",
+    "title": "iHeartCats",
+    "category": "pets",
+    "subcategory": "blog",
+    "language": "en",
+    "domain": "iheartcats.com"
+  },
+  {
+    "url": "https://cats.com/feed/",
+    "title": "Cats.com",
+    "category": "pets",
+    "subcategory": "blog",
+    "language": "en",
+    "domain": "cats.com"
+  },
+  {
+    "url": "https://www.whole-dog-journal.com/feed/",
+    "title": "Whole Dog Journal",
+    "category": "pets",
+    "subcategory": "health",
+    "language": "en",
+    "domain": "www.whole-dog-journal.com"
+  },
+  {
+    "url": "https://www.dogingtonpost.com/feed/",
+    "title": "The Dogington Post",
+    "category": "pets",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.dogingtonpost.com"
+  },
+  {
+    "url": "https://www.goodnewsforpets.com/feed/",
+    "title": "Good News For Pets",
+    "category": "pets",
+    "subcategory": "news",
+    "language": "en",
+    "domain": "www.goodnewsforpets.com"
+  },
+  {
+    "url": "https://www.aspca.org/blog/feed",
+    "title": "ASPCA Blog",
+    "category": "pets",
+    "subcategory": "welfare",
+    "language": "en",
+    "domain": "www.aspca.org"
+  },
+  {
+    "url": "https://www.akc.org/feed/",
+    "title": "AKC",
+    "category": "pets",
+    "subcategory": "breed",
+    "language": "en",
+    "domain": "www.akc.org"
+  },
+  {
+    "url": "https://www.akcchf.org/feed/",
+    "title": "AKC Canine Health Foundation",
+    "category": "pets",
+    "subcategory": "veterinary",
+    "language": "en",
+    "domain": "www.akcchf.org"
+  },
+  {
+    "url": "https://www.dvm360.com/rss",
+    "title": "dvm360",
+    "category": "pets",
+    "subcategory": "veterinary",
+    "language": "en",
+    "domain": "www.dvm360.com"
+  },
+  {
+    "url": "https://www.veterinarypracticenews.com/feed/",
+    "title": "Veterinary Practice News",
+    "category": "pets",
+    "subcategory": "veterinary",
+    "language": "en",
+    "domain": "www.veterinarypracticenews.com"
+  },
+  {
+    "url": "https://todaysveterinarypractice.com/feed/",
+    "title": "Today's Veterinary Practice",
+    "category": "pets",
+    "subcategory": "veterinary",
+    "language": "en",
+    "domain": "todaysveterinarypractice.com"
+  },
+  {
+    "url": "https://www.dailyvet.co.kr/feed",
+    "title": "데일리벳",
+    "category": "pets",
+    "subcategory": "veterinary",
+    "language": "ko",
+    "domain": "www.dailyvet.co.kr"
+  },
+  {
+    "url": "https://mypetlife.co.kr/feed",
+    "title": "비마이펫 라이프",
+    "category": "pets",
+    "subcategory": "blog",
+    "language": "ko",
+    "domain": "mypetlife.co.kr"
+  },
+  {
+    "url": "https://pet-happy.jp/feed",
+    "title": "ペトハピ (PetHappy)",
+    "category": "pets",
+    "subcategory": "blog",
+    "language": "ja",
+    "domain": "pet-happy.jp"
+  },
+  {
+    "url": "https://www.reddit.com/r/pets/.rss",
+    "title": "r/pets",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/dogs/.rss",
+    "title": "r/dogs",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/cats/.rss",
+    "title": "r/cats",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/AskVet/.rss",
+    "title": "r/AskVet",
+    "category": "pets",
+    "subcategory": "veterinary",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/Dogtraining/.rss",
+    "title": "r/Dogtraining",
+    "category": "pets",
+    "subcategory": "training",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/CatAdvice/.rss",
+    "title": "r/CatAdvice",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/petcare/.rss",
+    "title": "r/petcare",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/Rabbits/.rss",
+    "title": "r/Rabbits",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
+  },
+  {
+    "url": "https://www.reddit.com/r/Aquariums/.rss",
+    "title": "r/Aquariums",
+    "category": "pets",
+    "subcategory": "community",
+    "language": "en",
+    "domain": "www.reddit.com"
   }
 ]

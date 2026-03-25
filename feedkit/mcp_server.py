@@ -11,7 +11,7 @@ from feedkit.storage import FeedStore
 
 mcp = FastMCP(
     "feedkit",
-    instructions="RSS/Atom feed collection with 417 curated feeds. Search, subscribe, collect, and search articles.",
+    instructions="RSS/Atom feed collection with 444 curated feeds. Search, subscribe, collect, and search articles.",
 )
 
 _store: FeedStore | None = None
@@ -45,7 +45,7 @@ async def fetch_single_feed(url: str, count: int = 10) -> str:
 
 @mcp.tool()
 def search_feed_catalog(query: str = "", category: str = "", language: str = "", count: int = 20) -> str:
-    """Search the built-in catalog of 417 curated RSS feeds.
+    """Search the built-in catalog of 444 curated RSS feeds.
 
     The catalog includes tech blogs (AWS, Cloudflare, Netflix...),
     academic journals, government sources, news outlets, and more.

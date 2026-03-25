@@ -1,4 +1,4 @@
-"""Built-in curated feed catalog — 449 verified RSS/Atom feeds."""
+"""Built-in curated feed catalog — 444 verified RSS/Atom feeds."""
 
 from __future__ import annotations
 

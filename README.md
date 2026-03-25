@@ -5,96 +5,304 @@
 [![License](https://img.shields.io/github/license/QuartzUnit/feedkit)](https://github.com/QuartzUnit/feedkit/blob/main/LICENSE)
 [![Tests](https://img.shields.io/badge/tests-34%20passed-brightgreen)]()
 
-> RSS/Atom feed collection with 417 curated, verified feeds. Python MCP server included.
+> RSS/Atom feed collection with **444 curated, verified feeds**. CLI + Python API + MCP server.
 
-```python
-from feedkit import search_catalog, fetch_feed, FeedStore
-from feedkit.core import collect
+## Quick Start
 
-# Search the built-in catalog
-feeds = search_catalog("cloudflare")
+```bash
+pip install feedkit
 
-# Fetch a feed
-entries = await fetch_feed("https://blog.cloudflare.com/rss/")
-for entry in entries:
-    print(entry.title, entry.url)
-
-# Subscribe and collect
-store = FeedStore()
-store.subscribe("https://blog.cloudflare.com/rss/", category="tech")
-result = await collect(store)  # async parallel fetch
-print(f"{result.new_articles} new articles")
+feedkit search cloudflare           # search the built-in catalog
+feedkit subscribe-catalog -c technology   # subscribe to all 68 tech feeds
+feedkit collect                     # fetch all subscriptions (async parallel)
+feedkit find "kubernetes"           # full-text search collected articles
 ```
-
-## Features
-
-- **417 curated feeds** — tech blogs, academic, government, news, fact-check. All verified with 778K+ articles collected.
-- **Async parallel collection** — fetch hundreds of feeds in under a minute
-- **SQLite + FTS5** — local storage with full-text search, no server needed
-- **OPML import/export** — interop with Feedly, Inoreader, NetNewsWire
-- **MCP server** — 9 tools for Claude Code / MCP clients
-- **Feed health monitoring** — track success rates and errors per feed
 
 ## Install
 
 ```bash
-pip install feedkit
+pip install feedkit             # core (CLI + Python API)
+pip install "feedkit[mcp]"      # + MCP server
+pip install "feedkit[all]"      # + MCP + OPML import/export
 ```
 
-## CLI
+**Requirements:** Python 3.11+
+
+## CLI Reference
+
+### Catalog Commands
+
+#### `feedkit search [QUERY]`
+
+Search the built-in catalog of 444 curated feeds.
 
 ```bash
-feedkit search aws                        # search catalog
-feedkit search --category technology      # by category
-feedkit categories                        # list categories
-
-feedkit subscribe https://example.com/rss # subscribe to a feed
-feedkit subscribe-catalog -c technology   # subscribe to entire category
-feedkit list                              # list subscriptions
-
-feedkit collect                           # fetch all subscriptions
-feedkit latest                            # show latest articles
-feedkit find "kubernetes deployment"      # full-text search
-
-feedkit import-opml subs.opml             # import OPML
-feedkit export-opml backup.opml           # export OPML
-feedkit stats                             # catalog + local stats
+feedkit search aws                    # search by title or domain
+feedkit search --category science     # filter by category
+feedkit search --language ko          # filter by language
+feedkit search -c finance -l en -n 50 # combine filters
+feedkit search -j                     # JSON output (for piping)
 ```
+
+| Option | Short | Default | Description |
+|--------|-------|---------|-------------|
+| `--category` | `-c` | | Filter by category |
+| `--language` | `-l` | | Filter by language code (`en`, `ko`, `ja`, `zh`) |
+| `--limit` | `-n` | 20 | Max results |
+| `--json-output` | `-j` | | Output as JSON |
+
+#### `feedkit categories`
+
+List all available catalog categories.
+
+```
+$ feedkit categories
+  academia
+  finance
+  pets
+  science
+  society
+  technology
+```
+
+#### `feedkit stats`
+
+Show catalog and local subscription statistics.
+
+```
+$ feedkit stats
+Catalog: 444 feeds
+  academia: 13
+  finance: 89
+  pets: 27
+  science: 128
+  society: 119
+  technology: 68
+
+Local: 68 subscriptions, 1,247 articles
+```
+
+### Subscription Commands
+
+#### `feedkit subscribe <URL>`
+
+Subscribe to a single feed.
+
+```bash
+feedkit subscribe https://blog.cloudflare.com/rss/
+feedkit subscribe https://example.com/rss -c tech -t "My Feed"
+```
+
+| Option | Short | Description |
+|--------|-------|-------------|
+| `--category` | `-c` | Category label |
+| `--title` | `-t` | Display title override |
+
+#### `feedkit subscribe-catalog -c <CATEGORY>`
+
+Subscribe to all feeds in a catalog category at once.
+
+```bash
+feedkit subscribe-catalog -c technology   # subscribe to all 68 tech feeds
+feedkit subscribe-catalog -c science      # subscribe to all 128 science feeds
+```
+
+#### `feedkit unsubscribe <URL>`
+
+Remove a feed subscription and its collected articles.
+
+#### `feedkit list`
+
+List all current subscriptions with fetch counts and error counts.
+
+### Collection Commands
+
+#### `feedkit collect`
+
+Fetch new articles from all subscribed feeds (async parallel).
+
+```bash
+feedkit collect                    # collect all
+feedkit collect -c technology      # collect only tech feeds
+feedkit collect -n 50              # max 50 concurrent requests
+```
+
+| Option | Short | Default | Description |
+|--------|-------|---------|-------------|
+| `--category` | `-c` | | Only collect from this category |
+| `--concurrency` | `-n` | 20 | Max concurrent HTTP requests |
+
+Output:
+```
+Collecting from 68 feeds...
+ 67/68 feeds OK, 412 new articles, 8234ms
+```
+
+#### `feedkit latest`
+
+Show most recently collected articles.
+
+```bash
+feedkit latest                # latest 20 articles
+feedkit latest -n 50          # latest 50
+feedkit latest -c finance     # latest from finance only
+```
+
+#### `feedkit find <QUERY>`
+
+Full-text search (SQLite FTS5) across all collected articles.
+
+```bash
+feedkit find "kubernetes deployment"
+feedkit find "large language model" -n 50
+```
+
+### OPML Commands
+
+#### `feedkit import-opml <PATH>`
+
+Import feeds from an OPML file (Feedly, Inoreader, NetNewsWire, etc.).
+
+```bash
+feedkit import-opml subscriptions.opml
+```
+
+#### `feedkit export-opml <PATH>`
+
+Export current subscriptions to OPML.
+
+```bash
+feedkit export-opml backup.opml
+```
+
+## Python API
+
+```python
+from feedkit import search_catalog, fetch_feed, get_catalog_stats, FeedStore
+from feedkit.core import collect
+
+# Search the built-in catalog
+feeds = search_catalog("cloudflare")
+feeds = search_catalog(category="technology", language="en", limit=50)
+
+# Fetch a single feed (async)
+entries = await fetch_feed("https://blog.cloudflare.com/rss/")
+for entry in entries:
+    print(entry.title, entry.url, entry.published)
+
+# Subscribe and collect
+store = FeedStore()                              # SQLite at ~/.feedkit/feedkit.db
+store.subscribe("https://blog.cloudflare.com/rss/", category="tech")
+result = await collect(store, concurrency=20)    # async parallel fetch
+print(f"{result.new_articles} new, {result.feeds_ok}/{result.feeds_total} OK")
+
+# Search collected articles (FTS5)
+articles = store.search("kubernetes", count=10)
+
+# Latest articles
+articles = store.get_latest(count=20, category="tech")
+
+# Feed health
+health = store.get_health()                      # fetch/error counts per feed
+
+# Catalog stats
+stats = get_catalog_stats()                      # {total_feeds, categories, languages}
+
+store.close()
+```
+
+### Key Classes
+
+| Class | Description |
+|-------|-------------|
+| `FeedStore` | SQLite-backed subscription + article store (`~/.feedkit/feedkit.db`) |
+| `FeedEntry` | Single entry from a fetched feed (title, url, summary, published, author) |
+| `CollectResult` | Bulk collection result (feeds_ok, feeds_error, new_articles, duration_ms) |
+| `CatalogFeed` | Entry from the built-in catalog (url, title, category, subcategory, language, domain) |
 
 ## MCP Server
 
 ```bash
 pip install "feedkit[mcp]"
-feedkit-mcp  # starts stdio MCP server
+feedkit-mcp                    # starts stdio MCP server
 ```
 
-**9 tools:** fetch_single_feed, search_feed_catalog, catalog_stats, collect_feeds, search_articles, get_latest_articles, subscribe_feed, unsubscribe_feed, list_subscriptions
+### Configuration
+
+Claude Code (`~/.claude/settings.json`):
+```json
+{
+  "mcpServers": {
+    "feedkit": {
+      "command": "feedkit-mcp"
+    }
+  }
+}
+```
+
+### Tools Reference
+
+| # | Tool | Parameters | Description |
+|---|------|-----------|-------------|
+| 1 | `fetch_single_feed` | `url`, `count=10` | Fetch entries from any RSS/Atom URL (no subscription needed) |
+| 2 | `search_feed_catalog` | `query`, `category`, `language`, `count=20` | Search the built-in 444-feed catalog |
+| 3 | `catalog_stats` | | Get catalog statistics (total, by category, by language) |
+| 4 | `subscribe_feed` | `url`, `title`, `category` | Subscribe to a feed for ongoing collection |
+| 5 | `unsubscribe_feed` | `url` | Remove a subscription |
+| 6 | `list_subscriptions` | | List all subscriptions with status |
+| 7 | `collect_feeds` | `category` | Collect new articles from all subscriptions |
+| 8 | `search_articles` | `query`, `count=10` | Full-text search across collected articles |
+| 9 | `get_latest_articles` | `category`, `count=20` | Get most recently collected articles |
+
+### MCP Workflow Example
+
+```
+User: "What are the latest AI papers on arXiv?"
+
+1. search_feed_catalog(query="arxiv", category="science")
+   → finds arXiv cs.AI, cs.LG, cs.CL feeds
+
+2. subscribe_feed(url="https://rss.arxiv.org/rss/cs.AI")
+
+3. collect_feeds(category="science")
+   → fetches new entries
+
+4. get_latest_articles(category="science", count=10)
+   → returns latest papers
+```
 
 ## Built-in Catalog
 
-417 verified feeds across 5 categories. All audited — hard paywalls (Bloomberg, FT, WSJ) and broken URLs removed.
+444 verified feeds across 6 categories. All audited — hard paywalls (Bloomberg, FT, WSJ) and broken URLs removed.
 
-| Category | Feeds | Subcategories | Examples |
-|----------|-------|---------------|---------|
-| **technology** | 68 | ai/ml, developer, it_news, security, startup | AWS, Cloudflare, Stripe, Netflix, Spotify, Meta, Go Blog, Rust Blog, Hacker News |
-| **science** | 128 | journal, preprint, news, government | Nature, Science, arXiv, bioRxiv, NASA, PLOS, Cambridge, BAIR |
-| **finance** | 93 | markets, central_bank, regulatory, crypto | Fed, BOE, BOJ, SEC, CNBC, CoinDesk, Yahoo Finance |
-| **society** | 119 | news_us, news_ko, news_intl, factcheck, government | BBC, NPR, NHK, JTBC, Al Jazeera, PolitiFact, Snopes |
+| Category | Feeds | Subcategories | Highlights |
+|----------|------:|---------------|-----------|
+| **technology** | 68 | ai_ml, developer, it_news, security, startup, ... | AWS, Cloudflare, Stripe, Netflix, HN, Go Blog, Rust Blog |
+| **science** | 128 | journal, preprint, news, government | Nature, Science, arXiv, bioRxiv, medRxiv, NASA, PLOS |
+| **society** | 119 | news_us, news_ko, news_uk, news_intl, factcheck, ... | BBC, NPR, NYT, NHK, JTBC, PolitiFact, Snopes |
+| **finance** | 89 | markets, central_bank, regulatory, crypto | Fed, BOE, BOJ, SEC, CNBC, CoinDesk, Yahoo Finance |
+| **pets** | 27 | veterinary, community, blog, health | AKC, PetMD, ASPCA, dvm360, r/dogs, r/cats |
 | **academia** | 13 | ai_ml, research, institution | Google AI, DeepMind, Stanford HAI, Hugging Face |
 
-### Why not just use awesome-rss-feeds?
+**Languages:** English (381), Korean (47), Japanese (14), Chinese (2)
+
+Full feed list: [CATALOG.md](CATALOG.md)
+
+## Why FeedKit?
 
 | | [awesome-rss-feeds](https://github.com/plenaryapp/awesome-rss-feeds) (2.1K★) | [engineering-blogs](https://github.com/kilimchoi/engineering-blogs) (37.5K★) | **FeedKit** |
 |--|---|---|---|
-| Feeds | ~500 | ~600 | 417 |
+| Type | Markdown list | Markdown list | **Python package** |
+| Feeds | ~500 | ~600 | 444 |
 | Scope | General | Tech blogs only | Tech + Science + Finance + News + Factcheck |
-| Last content update | 2021 (stale) | 2022 (stale) | **Active (daily collection)** |
+| Last update | 2021 (stale) | 2022 (stale) | **Active (daily collection)** |
 | Verified working | No | No | **Yes (778K+ articles collected)** |
 | Legal audit | No | No | **Yes (paywall/ToS feeds removed)** |
-| pip install | No | No | **Yes** |
+| CLI | No | No | **Yes (12 commands)** |
+| Programmatic API | No | No | **Yes (async Python)** |
 | MCP server | No | No | **Yes (9 tools)** |
-| OPML | No | No | **Yes** |
-| Format | Markdown | Markdown | **JSON + OPML + Markdown** |
+| OPML | No | No | **Yes (import/export)** |
+| FTS search | No | No | **Yes (SQLite FTS5)** |
 
 ## Disclaimer
 
@@ -106,4 +314,4 @@ Feeds behind hard paywalls (Bloomberg, FT, WSJ, Barron's) and feeds with aggress
 
 [MIT](LICENSE)
 
-<!-- mcp-name: io.github.ArkNill/feedkit -->
+<!-- mcp-name: io.github.QuartzUnit/feedkit -->
