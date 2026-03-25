@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/github/license/QuartzUnit/feedkit)](https://github.com/QuartzUnit/feedkit/blob/main/LICENSE)
 [![Tests](https://img.shields.io/badge/tests-34%20passed-brightgreen)]()
 
+> [한국어 문서](README.ko.md)
+
 > RSS/Atom feed collection with **444 curated, verified feeds**. CLI + Python API + MCP server.
 
 ## Quick Start
