@@ -312,6 +312,10 @@ This package distributes a catalog of **publicly available RSS feed URLs**, not 
 
 Feeds behind hard paywalls (Bloomberg, FT, WSJ, Barron's) and feeds with aggressive terms of service have been removed from the catalog.
 
+## Used in
+
+- [newswatch](https://github.com/QuartzUnit/newswatch) — RSS news monitoring pipeline (feedkit → markgrab → embgrep → diffgrab)
+
 ## License
 
 [MIT](LICENSE)
