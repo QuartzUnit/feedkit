@@ -30,6 +30,16 @@ pip install "feedkit[all]"      # + MCP + OPML import/export
 
 **Requirements:** Python 3.11+
 
+## How It Works
+
+```mermaid
+flowchart LR
+    A["📋 Catalog\n444 curated feeds"] --> B["Subscribe\nselect feeds"]
+    B --> C["🔄 Collect\nfetch new entries"]
+    C --> D["📦 Store\nSQLite database"]
+    D --> E["🔍 Query\nfilter & retrieve"]
+```
+
 ## CLI Reference
 
 ### Catalog Commands

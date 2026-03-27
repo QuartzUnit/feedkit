@@ -30,6 +30,16 @@ pip install "feedkit[all]"      # + MCP + OPML 가져오기/내보내기
 
 **요구사항:** Python 3.11+
 
+## 동작 원리
+
+```mermaid
+flowchart LR
+    A["📋 카탈로그\n444개 검증 피드"] --> B["구독\n피드 선택"]
+    B --> C["🔄 수집\n새 항목 가져오기"]
+    C --> D["📦 저장\nSQLite 데이터베이스"]
+    D --> E["🔍 검색\n필터 & 조회"]
+```
+
 ## CLI 레퍼런스
 
 ### 카탈로그 명령어
