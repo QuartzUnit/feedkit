@@ -1,815 +1,190 @@
-# feedkit
-
-> RSS/Atom feed collection with 444 curated feeds. Python MCP server included.
-
-## Purpose
-
-Collects and manages RSS/Atom feeds with a built-in catalog of 444 curated sources spanning technology, science, finance, society, and academia. Stores subscriptions and articles in a local SQLite database with FTS5 full-text search.
-
-## Capabilities
-
-- **Curated catalog**: 444 verified feeds (tech blogs, journals, government, news) searchable by keyword, category, and language
-- **Feed fetching**: Async HTTP with feedparser, concurrent collection (default 20 workers)
-- **Subscription management**: Subscribe, unsubscribe, bulk subscribe by catalog category
-- **Article storage**: SQLite with FTS5 full-text search across titles, summaries, authors
-- **OPML import/export**: Interoperable with other feed readers via listparser
-- **Category filtering**: Filter feeds and articles by category and language
-- **MCP server**: Full MCP integration via FastMCP for use with Claude Code and other AI agents
-- **CLI**: Rich terminal UI with tables, JSON output mode
+# feedkit — Full API Reference
+> RSS/Atom feed collection with 444 curated feeds, SQLite FTS5 storage, MCP server.
 
 ## Installation
+`pip install feedkit` / `feedkit[mcp]` / `feedkit[opml]` / `feedkit[all]` / `feedkit[dev]` — Python >= 3.11
 
+## Dataclasses
+
+### FeedEntry (`feedkit.core`)
+| field | type | default | description |
+|-------|------|---------|-------------|
+| title | str | "" | Entry title |
+| url | str | "" | Permalink URL |
+| summary | str | "" | HTML-stripped, max 500 chars |
+| published | str \| None | None | ISO 8601 datetime |
+| author | str | "" | Author name |
+| feed_url | str | "" | Source feed URL |
+| feed_title | str | "" | Source feed title |
+| guid | str | "" | Unique ID (entry id > link > title) |
+
+### CollectResult (`feedkit.core`)
+| field | type | default | description |
+|-------|------|---------|-------------|
+| feeds_total | int | 0 | Subscriptions attempted |
+| feeds_ok | int | 0 | Feeds fetched successfully |
+| feeds_error | int | 0 | Feeds that failed |
+| new_articles | int | 0 | New articles saved (deduped by GUID) |
+| duration_ms | float | 0.0 | Elapsed time in ms |
+| errors | list[dict] | [] | Each: {"feed_url": str, "error": str} |
+
+### CatalogFeed (`feedkit.catalog`)
+| field | type | description |
+|-------|------|-------------|
+| url | str | Feed URL |
+| title | str | Display title |
+| category | str | e.g. "technology", "science", "finance" |
+| subcategory | str | e.g. "cloud", "ai", "security" |
+| language | str | e.g. "en", "ko" |
+| domain | str | e.g. "aws.amazon.com" |
+
+### Subscription (`feedkit.storage`)
+| field | type | default | description |
+|-------|------|---------|-------------|
+| feed_url | str | — | Feed URL (primary key) |
+| title | str | "" | Display title |
+| category | str | "" | Category label |
+| language | str | "en" | Language code |
+| added_at | str | "" | ISO datetime when subscribed |
+| last_fetch | str \| None | None | Last successful fetch |
+| fetch_count | int | 0 | Successful fetches |
+| error_count | int | 0 | Failed fetches |
+| last_error | str \| None | None | Last error message |
+
+### Article (`feedkit.storage`)
+| field | type | default | description |
+|-------|------|---------|-------------|
+| guid | str | — | Unique ID (primary key) |
+| feed_url | str | — | Source feed URL (FK to subscriptions) |
+| title | str | "" | Article title |
+| url | str | "" | Permalink |
+| summary | str | "" | Summary text |
+| author | str | "" | Author name |
+| published | str \| None | None | ISO publication datetime |
+| fetched_at | str | "" | ISO datetime when stored |
+
+## Functions
+
+### fetch_feed (`feedkit.core`)
+`async def fetch_feed(url: str, *, count: int = 50, timeout: float = 15.0) -> list[FeedEntry]`
+Fetch and parse a single RSS/Atom feed. Raises `httpx.HTTPStatusError` / `httpx.TimeoutException`.
+
+### collect (`feedkit.core`)
+`async def collect(store: FeedStore, *, category: str = "", concurrency: int = 20, timeout: float = 15.0, count_per_feed: int = 50) -> CollectResult`
+Collect articles from all subscribed feeds concurrently. Empty category = all.
+
+### search_catalog (`feedkit.catalog`)
+`def search_catalog(query: str = "", *, category: str = "", language: str = "", limit: int = 50) -> list[CatalogFeed]`
+Case-insensitive substring search across title/domain/URL. Empty query returns all (up to limit).
+
+### get_catalog_stats (`feedkit.catalog`)
+`def get_catalog_stats() -> dict`
+Returns `{"total_feeds": int, "categories": dict[str,int], "languages": dict[str,int]}`.
+
+### list_categories (`feedkit.catalog`)
+`def list_categories() -> list[str]`
+Sorted unique category names (e.g. `["academia","finance","science","society","technology"]`).
+
+### import_opml (`feedkit.opml`)
+`def import_opml(store: FeedStore, path: str | Path) -> int`
+Import feeds from OPML file. Returns count imported. Requires `feedkit[opml]`.
+
+### export_opml (`feedkit.opml`)
+`def export_opml(store: FeedStore, path: str | Path) -> int`
+Export subscriptions to OPML file. Returns count exported.
+
+## FeedStore (`feedkit.storage`)
+SQLite-backed subscription + article store with FTS5. Default DB: `~/.feedkit/feedkit.db` (WAL mode, FK cascade).
+
+`FeedStore(db_path: str | Path | None = None)` — None uses default path.
+`.close() -> None`
+`.subscribe(feed_url: str, title: str = "", category: str = "", language: str = "en") -> None` — INSERT OR IGNORE
+`.unsubscribe(feed_url: str) -> None` — Cascade-deletes articles
+`.list_subscriptions() -> list[Subscription]` — Ordered by category, title
+`.subscription_count() -> int`
+`.save_articles(articles: list[Article]) -> int` — Returns new (non-dup) count, auto-updates FTS5
+`.article_count() -> int`
+`.get_latest(count: int = 20, category: str = "") -> list[Article]` — By fetched_at desc
+`.search(query: str, count: int = 20) -> list[Article]` — FTS5 query (AND/OR/NEAR), ranked by relevance
+`.update_fetch_status(feed_url: str, success: bool, error: str = "") -> None` — Called by collect()
+`.get_health() -> list[dict]` — Keys: feed_url, title, fetch_count, error_count, last_fetch, last_error
+
+## MCP Server
+Start: `feedkit-mcp` (stdio). Server name: `feedkit`. All tools return JSON strings.
+
+| tool | signature | description |
+|------|-----------|-------------|
+| fetch_single_feed | `(url: str, count: int = 10) -> str` | Fetch single feed, no subscription needed |
+| search_feed_catalog | `(query: str = "", category: str = "", language: str = "", count: int = 20) -> str` | Search 444 curated feeds |
+| catalog_stats | `() -> str` | Catalog statistics |
+| collect_feeds | `(category: str = "") -> str` | Collect from all subscriptions |
+| search_articles | `(query: str, count: int = 10) -> str` | FTS5 search collected articles |
+| get_latest_articles | `(category: str = "", count: int = 20) -> str` | Recent articles |
+| subscribe_feed | `(url: str, title: str = "", category: str = "") -> str` | Subscribe to feed |
+| unsubscribe_feed | `(url: str) -> str` | Unsubscribe from feed |
+| list_subscriptions | `() -> str` | List all subscriptions with status |
+
+MCP config (`~/.claude/config.json`):
+```json
+{"mcpServers": {"feedkit": {"command": "feedkit-mcp"}}}
 ```
-pip install feedkit            # core (feedparser, httpx, click, rich)
-pip install feedkit[mcp]       # + MCP server (fastmcp)
-pip install feedkit[opml]      # + OPML import/export (listparser)
-pip install feedkit[all]       # everything
-pip install feedkit[dev]       # + pytest, pytest-asyncio, ruff
-```
-
-Requires Python >= 3.11.
-
-## Quick Use
-
-### CLI
-
-```bash
-feedkit search "aws" --category technology --language en
-feedkit subscribe https://example.com/feed.xml --category tech
-feedkit subscribe-catalog --category technology
-feedkit collect
-feedkit latest --count 10
-feedkit find "kubernetes"
-feedkit stats
-feedkit categories
-feedkit import-opml feeds.opml
-feedkit export-opml backup.opml
-```
-
-### Python
-
-```python
-from feedkit import fetch_feed, search_catalog, get_catalog_stats, FeedStore
-
-entries = await fetch_feed("https://example.com/feed.xml", count=10)
-feeds = search_catalog("aws", category="technology", language="en")
-stats = get_catalog_stats()
-store = FeedStore()
-store.subscribe("https://example.com/feed.xml", category="tech")
-```
-
-### MCP
-
-Server name: `feedkit` (command: `feedkit-mcp`, stdio transport)
-Tools: `fetch_single_feed`, `search_feed_catalog`, `catalog_stats`, `collect_feeds`, `search_articles`, `get_latest_articles`, `subscribe_feed`, `unsubscribe_feed`, `list_subscriptions`
-
-## API Reference
-
-### Module: `feedkit` (top-level exports)
-
-```python
-from feedkit import fetch_feed, search_catalog, get_catalog_stats, FeedStore
-```
-
----
-
-### Dataclass: `feedkit.core.FeedEntry`
-
-A single entry parsed from an RSS/Atom feed.
-
-```python
-@dataclass
-class FeedEntry:
-    title: str = ""            # Entry title
-    url: str = ""              # Entry permalink URL
-    summary: str = ""          # Cleaned summary text (HTML stripped, max 500 chars)
-    published: str | None = None  # ISO 8601 datetime string, or None if unavailable
-    author: str = ""           # Author name
-    feed_url: str = ""         # Source feed URL
-    feed_title: str = ""       # Source feed title
-    guid: str = ""             # Unique identifier (entry id > link > title)
-```
-
----
-
-### Dataclass: `feedkit.core.CollectResult`
-
-Result of a bulk feed collection operation.
-
-```python
-@dataclass
-class CollectResult:
-    feeds_total: int = 0       # Total subscriptions attempted
-    feeds_ok: int = 0          # Feeds fetched successfully
-    feeds_error: int = 0       # Feeds that failed
-    new_articles: int = 0      # New articles saved (deduped by GUID)
-    duration_ms: float = 0.0   # Total elapsed time in milliseconds
-    errors: list[dict] = field(default_factory=list)
-        # Each dict: {"feed_url": str, "error": str}
-```
-
----
-
-### Function: `feedkit.core.fetch_feed`
-
-Fetch and parse a single RSS/Atom feed.
-
-```python
-async def fetch_feed(
-    url: str,
-    *,
-    count: int = 50,
-    timeout: float = 15.0,
-) -> list[FeedEntry]
-```
-
-**Parameters:**
-- `url` (str): RSS or Atom feed URL.
-- `count` (int, default=50): Maximum number of entries to return.
-- `timeout` (float, default=15.0): HTTP timeout in seconds.
-
-**Returns:** `list[FeedEntry]` — Parsed feed entries. Summaries are HTML-stripped and truncated to 500 characters.
-
-**Raises:** `httpx.HTTPStatusError` on non-2xx responses; `httpx.TimeoutException` on timeout.
-
----
-
-### Function: `feedkit.core.collect`
-
-Collect articles from all subscribed feeds concurrently.
-
-```python
-async def collect(
-    store: FeedStore,
-    *,
-    category: str = "",
-    concurrency: int = 20,
-    timeout: float = 15.0,
-    count_per_feed: int = 50,
-) -> CollectResult
-```
-
-**Parameters:**
-- `store` (FeedStore): FeedStore instance with active subscriptions.
-- `category` (str, default=""): Only collect from subscriptions with this category. Empty string means all.
-- `concurrency` (int, default=20): Maximum concurrent HTTP requests (asyncio.Semaphore).
-- `timeout` (float, default=15.0): Per-feed HTTP timeout in seconds.
-- `count_per_feed` (int, default=50): Maximum entries to fetch per feed.
-
-**Returns:** `CollectResult` — Summary with counts of successes, errors, new articles, and timing.
-
----
-
-### Dataclass: `feedkit.catalog.CatalogFeed`
-
-A feed entry from the built-in curated catalog.
-
-```python
-@dataclass
-class CatalogFeed:
-    url: str           # Feed URL
-    title: str         # Feed display title
-    category: str      # Category (e.g., "technology", "science", "finance")
-    subcategory: str   # Subcategory (e.g., "cloud", "ai", "security")
-    language: str      # Language code (e.g., "en", "ko")
-    domain: str        # Domain name (e.g., "aws.amazon.com")
-```
-
----
-
-### Function: `feedkit.catalog.search_catalog`
-
-Search the built-in feed catalog of 444 curated feeds.
-
-```python
-def search_catalog(
-    query: str = "",
-    *,
-    category: str = "",
-    language: str = "",
-    limit: int = 50,
-) -> list[CatalogFeed]
-```
-
-**Parameters:**
-- `query` (str, default=""): Case-insensitive substring search across title, domain, and URL. Empty returns all (up to limit).
-- `category` (str, default=""): Exact match filter on category. Empty means no filter.
-- `language` (str, default=""): Exact match filter on language code (e.g., "en", "ko"). Empty means no filter.
-- `limit` (int, default=50): Maximum number of results to return.
-
-**Returns:** `list[CatalogFeed]` — Matching catalog entries.
-
----
-
-### Function: `feedkit.catalog.get_catalog_stats`
-
-Get aggregate statistics about the built-in catalog.
-
-```python
-def get_catalog_stats() -> dict
-```
-
-**Parameters:** None.
-
-**Returns:** `dict` with keys:
-- `"total_feeds"` (int): Total number of feeds in catalog.
-- `"categories"` (dict[str, int]): Feed count per category, sorted alphabetically.
-- `"languages"` (dict[str, int]): Feed count per language code, sorted alphabetically.
-
----
-
-### Function: `feedkit.catalog.list_categories`
-
-List all available categories in the catalog.
-
-```python
-def list_categories() -> list[str]
-```
-
-**Parameters:** None.
-
-**Returns:** `list[str]` — Sorted list of unique category names (e.g., `["academia", "finance", "science", "society", "technology"]`).
-
----
-
-### Dataclass: `feedkit.storage.Subscription`
-
-A feed subscription record.
-
-```python
-@dataclass
-class Subscription:
-    feed_url: str                     # Feed URL (primary key)
-    title: str = ""                   # Display title
-    category: str = ""                # Category label
-    language: str = "en"              # Language code
-    added_at: str = ""                # ISO datetime when subscribed
-    last_fetch: str | None = None     # ISO datetime of last successful fetch
-    fetch_count: int = 0              # Number of successful fetches
-    error_count: int = 0              # Number of failed fetches
-    last_error: str | None = None     # Last error message, if any
-```
-
----
-
-### Dataclass: `feedkit.storage.Article`
-
-A stored article record.
-
-```python
-@dataclass
-class Article:
-    guid: str             # Unique identifier (primary key)
-    feed_url: str         # Source feed URL (foreign key to subscriptions)
-    title: str = ""       # Article title
-    url: str = ""         # Article permalink
-    summary: str = ""     # Article summary text
-    author: str = ""      # Author name
-    published: str | None = None  # ISO datetime of publication
-    fetched_at: str = ""  # ISO datetime when article was stored
-```
-
----
-
-### Class: `feedkit.storage.FeedStore`
-
-SQLite-backed feed subscription and article store with FTS5 full-text search.
-
-Database location: `~/.feedkit/feedkit.db` by default. Uses WAL journal mode and foreign keys.
-
-#### Constructor
-
-```python
-FeedStore(db_path: str | Path | None = None) -> None
-```
-
-**Parameters:**
-- `db_path` (str | Path | None, default=None): Path to SQLite database file. If None, uses `~/.feedkit/feedkit.db`. Parent directories are created automatically.
-
-#### Method: `close`
-
-```python
-def close(self) -> None
-```
-
-Close the database connection.
-
-#### Method: `subscribe`
-
-```python
-def subscribe(
-    self,
-    feed_url: str,
-    title: str = "",
-    category: str = "",
-    language: str = "en",
-) -> None
-```
-
-Add a feed subscription. If the feed_url already exists, the operation is silently ignored (INSERT OR IGNORE).
-
-**Parameters:**
-- `feed_url` (str): RSS/Atom feed URL.
-- `title` (str, default=""): Display title.
-- `category` (str, default=""): Category label for grouping and filtering.
-- `language` (str, default="en"): Language code.
-
-#### Method: `unsubscribe`
-
-```python
-def unsubscribe(self, feed_url: str) -> None
-```
-
-Remove a feed subscription and cascade-delete all its articles.
-
-**Parameters:**
-- `feed_url` (str): Feed URL to remove.
-
-#### Method: `list_subscriptions`
-
-```python
-def list_subscriptions(self) -> list[Subscription]
-```
-
-List all subscriptions, ordered by category then title.
-
-**Returns:** `list[Subscription]`
-
-#### Method: `subscription_count`
-
-```python
-def subscription_count(self) -> int
-```
-
-Get total number of subscriptions.
-
-**Returns:** `int`
-
-#### Method: `save_articles`
-
-```python
-def save_articles(self, articles: list[Article]) -> int
-```
-
-Save articles to the database, skipping duplicates (by GUID). Automatically updates the FTS5 index via database triggers.
-
-**Parameters:**
-- `articles` (list[Article]): Articles to save.
-
-**Returns:** `int` — Number of new (non-duplicate) articles saved.
-
-#### Method: `article_count`
-
-```python
-def article_count(self) -> int
-```
-
-Get total number of stored articles.
-
-**Returns:** `int`
-
-#### Method: `get_latest`
-
-```python
-def get_latest(self, count: int = 20, category: str = "") -> list[Article]
-```
-
-Get the most recently fetched articles.
-
-**Parameters:**
-- `count` (int, default=20): Maximum number of articles to return.
-- `category` (str, default=""): Filter by subscription category. Empty means all categories.
-
-**Returns:** `list[Article]` — Articles ordered by fetched_at descending.
-
-#### Method: `search`
-
-```python
-def search(self, query: str, count: int = 20) -> list[Article]
-```
-
-Full-text search across article titles, summaries, and authors using SQLite FTS5.
-
-**Parameters:**
-- `query` (str): FTS5 search query. Supports SQLite FTS5 syntax (e.g., `"kubernetes AND deployment"`, `"cloud OR serverless"`, `"NEAR(api gateway)"`).
-- `count` (int, default=20): Maximum number of results.
-
-**Returns:** `list[Article]` — Matching articles ordered by FTS5 rank (relevance).
-
-#### Method: `update_fetch_status`
-
-```python
-def update_fetch_status(
-    self,
-    feed_url: str,
-    success: bool,
-    error: str = "",
-) -> None
-```
-
-Update fetch status counters for a subscription. Called automatically by `collect()`.
-
-**Parameters:**
-- `feed_url` (str): Feed URL to update.
-- `success` (bool): True increments fetch_count and clears last_error; False increments error_count and sets last_error.
-- `error` (str, default=""): Error message (only used when success=False).
-
-#### Method: `get_health`
-
-```python
-def get_health(self) -> list[dict]
-```
-
-Get feed health status for all subscriptions, ordered by error_count descending.
-
-**Returns:** `list[dict]` — Each dict has keys: `"feed_url"`, `"title"`, `"fetch_count"`, `"error_count"`, `"last_fetch"`, `"last_error"`.
-
----
-
-### Function: `feedkit.opml.import_opml`
-
-Import feeds from an OPML file into a FeedStore.
-
-```python
-def import_opml(store: FeedStore, path: str | Path) -> int
-```
-
-**Parameters:**
-- `store` (FeedStore): Target store to add subscriptions to.
-- `path` (str | Path): Path to the OPML file.
-
-**Returns:** `int` — Number of feeds imported. Category is derived from the parent `<outline>` element's text attribute.
-
-**Requires:** `pip install feedkit[opml]` (listparser dependency, though the current implementation uses xml.etree).
-
----
-
-### Function: `feedkit.opml.export_opml`
-
-Export all subscriptions from a FeedStore to an OPML file.
-
-```python
-def export_opml(store: FeedStore, path: str | Path) -> int
-```
-
-**Parameters:**
-- `store` (FeedStore): Source store with subscriptions.
-- `path` (str | Path): Output OPML file path.
-
-**Returns:** `int` — Number of feeds exported. Feeds are grouped by category in the OPML structure.
-
----
-
-### MCP Server Tools
-
-Server name: `feedkit`. Start with `feedkit-mcp` (stdio transport).
-
-All tools return JSON strings.
-
-#### Tool: `fetch_single_feed`
-
-```python
-async def fetch_single_feed(url: str, count: int = 10) -> str
-```
-
-Fetch latest entries from a single RSS/Atom feed URL. No subscription needed.
-
-**Parameters:**
-- `url` (str): RSS or Atom feed URL.
-- `count` (int, default=10): Maximum entries to return.
-
-**Returns:** JSON array of objects with keys: `title`, `url`, `summary` (truncated to 200 chars), `published`, `author`.
-
-#### Tool: `search_feed_catalog`
-
-```python
-def search_feed_catalog(query: str = "", category: str = "", language: str = "", count: int = 20) -> str
-```
-
-Search the built-in catalog of 444 curated RSS feeds.
-
-**Parameters:**
-- `query` (str, default=""): Search by title or domain.
-- `category` (str, default=""): Filter by category (technology, science, finance, society, academia).
-- `language` (str, default=""): Filter by language code.
-- `count` (int, default=20): Maximum results.
-
-**Returns:** JSON array of objects with keys: `url`, `title`, `category`, `language`, `domain`.
-
-#### Tool: `catalog_stats`
-
-```python
-def catalog_stats() -> str
-```
-
-Get statistics about the built-in feed catalog.
-
-**Returns:** JSON object with keys: `total_feeds`, `categories`, `languages`.
-
-#### Tool: `collect_feeds`
-
-```python
-async def collect_feeds(category: str = "") -> str
-```
-
-Collect new articles from all subscribed feeds in parallel.
-
-**Parameters:**
-- `category` (str, default=""): Only collect from this category (empty = all).
-
-**Returns:** JSON object with keys: `feeds_total`, `feeds_ok`, `feeds_error`, `new_articles`, `duration_ms`.
-
-#### Tool: `search_articles`
-
-```python
-def search_articles(query: str, count: int = 10) -> str
-```
-
-Full-text search across all collected articles using FTS5.
-
-**Parameters:**
-- `query` (str): Search query.
-- `count` (int, default=10): Maximum results.
-
-**Returns:** JSON array of objects with keys: `title`, `url`, `summary` (truncated to 200 chars), `published`.
-
-#### Tool: `get_latest_articles`
-
-```python
-def get_latest_articles(category: str = "", count: int = 20) -> str
-```
-
-Get the most recently collected articles.
-
-**Parameters:**
-- `category` (str, default=""): Filter by subscription category.
-- `count` (int, default=20): Number of articles.
-
-**Returns:** JSON array of objects with keys: `title`, `url`, `summary` (truncated to 200 chars), `published`, `feed_url`.
-
-#### Tool: `subscribe_feed`
-
-```python
-def subscribe_feed(url: str, title: str = "", category: str = "") -> str
-```
-
-Subscribe to an RSS feed for ongoing collection.
-
-**Parameters:**
-- `url` (str): RSS/Atom feed URL.
-- `title` (str, default=""): Display title.
-- `category` (str, default=""): Category label.
-
-**Returns:** JSON object: `{"status": "subscribed", "url": "<url>"}`.
-
-#### Tool: `unsubscribe_feed`
-
-```python
-def unsubscribe_feed(url: str) -> str
-```
-
-Unsubscribe from a feed.
-
-**Parameters:**
-- `url` (str): Feed URL to unsubscribe.
-
-**Returns:** JSON object: `{"status": "unsubscribed", "url": "<url>"}`.
-
-#### Tool: `list_subscriptions`
-
-```python
-def list_subscriptions() -> str
-```
-
-List all current feed subscriptions with their status.
-
-**Returns:** JSON array of objects with keys: `url`, `title`, `category`, `fetch_count`, `error_count`, `last_fetch`.
 
 ## CLI Reference
+Entry point: `feedkit` (or `python -m feedkit`). All commands support `--help`.
 
-Entry point: `feedkit` (or `python -m feedkit`). All commands use `--help` for detailed options.
-
-| Command | Description | Key Options |
+| command | description | key options |
 |---------|-------------|-------------|
-| `feedkit search [QUERY]` | Search built-in catalog | `--category/-c`, `--language/-l`, `--limit/-n`, `--json-output/-j` |
-| `feedkit subscribe URL` | Subscribe to a feed | `--category/-c`, `--title/-t` |
-| `feedkit unsubscribe URL` | Unsubscribe from a feed | — |
-| `feedkit list` | List all subscriptions | — |
-| `feedkit subscribe-catalog` | Bulk subscribe by category | `--category/-c` (required) |
-| `feedkit collect` | Collect articles from subscriptions | `--category/-c`, `--concurrency/-n` (default 20) |
-| `feedkit find QUERY` | Full-text search articles | `--count/-n` (default 20) |
-| `feedkit latest` | Show latest articles | `--count/-n` (default 20), `--category/-c` |
-| `feedkit stats` | Show catalog + local statistics | — |
-| `feedkit categories` | List catalog categories | — |
-| `feedkit import-opml PATH` | Import feeds from OPML file | — |
-| `feedkit export-opml PATH` | Export subscriptions to OPML file | — |
-
-## Configuration
-
-### Database Location
-
-Default: `~/.feedkit/feedkit.db`
-
-Override programmatically:
-```python
-store = FeedStore(db_path="/custom/path/feeds.db")
-```
-
-### Constants
-
-| Constant | Value | Location |
-|----------|-------|----------|
-| `DEFAULT_TIMEOUT` | `15.0` seconds | `feedkit.core` |
-| `DEFAULT_CONCURRENCY` | `20` workers | `feedkit.core` |
-| `USER_AGENT` | `"FeedKit/0.1.0 (+https://github.com/QuartzUnit/feedkit)"` | `feedkit.core` |
-| `DEFAULT_DB_PATH` | `~/.feedkit/feedkit.db` | `feedkit.storage` |
-
-### SQLite Configuration
-
-- Journal mode: WAL (Write-Ahead Logging) for concurrent reads
-- Foreign keys: ON (cascade delete from subscriptions to articles)
-- FTS5 index: Auto-maintained via triggers on article insert/delete
+| `search [QUERY]` | Search built-in catalog | `-c` category, `-l` language, `-n` limit, `-j` JSON |
+| `subscribe URL` | Subscribe to feed | `-c` category, `-t` title |
+| `unsubscribe URL` | Unsubscribe | — |
+| `list` | List subscriptions | — |
+| `subscribe-catalog` | Bulk subscribe by category | `-c` category (required) |
+| `collect` | Collect from subscriptions | `-c` category, `-n` concurrency (default 20) |
+| `find QUERY` | FTS5 search articles | `-n` count (default 20) |
+| `latest` | Show latest articles | `-n` count, `-c` category |
+| `stats` | Catalog + local statistics | — |
+| `categories` | List catalog categories | — |
+| `import-opml PATH` | Import OPML | — |
+| `export-opml PATH` | Export OPML | — |
 
 ## Examples
 
-### Basic: Fetch a single feed
-
 ```python
+# Fetch single feed
 import asyncio
 from feedkit import fetch_feed
-
-async def main():
-    entries = await fetch_feed("https://aws.amazon.com/blogs/aws/feed/", count=5)
-    for e in entries:
-        print(f"{e.title} — {e.published}")
-        print(f"  {e.url}")
-        print(f"  {e.summary[:100]}...")
-        print()
-
-asyncio.run(main())
+entries = asyncio.run(fetch_feed("https://aws.amazon.com/blogs/aws/feed/", count=5))
+for e in entries:
+    print(f"{e.title} — {e.published}\n  {e.url}")
 ```
 
-### Search the curated catalog and subscribe
-
 ```python
+# Search catalog, subscribe, collect, search articles
+import asyncio
 from feedkit import search_catalog, FeedStore
-
-# Find all English technology feeds mentioning "cloud"
-feeds = search_catalog("cloud", category="technology", language="en")
-print(f"Found {len(feeds)} feeds")
-for f in feeds:
-    print(f"  [{f.subcategory}] {f.title} — {f.domain}")
-
-# Subscribe to all of them
+from feedkit.core import collect
 store = FeedStore()
-for f in feeds:
+for f in search_catalog("cloud", category="technology", language="en"):
     store.subscribe(f.url, title=f.title, category=f.category, language=f.language)
+result = asyncio.run(collect(store, concurrency=30))
+articles = store.search("kubernetes deployment", count=5)
 store.close()
 ```
-
-### Bulk collect and search articles
-
-```python
-import asyncio
-from feedkit.core import collect
-from feedkit.storage import FeedStore
-
-async def main():
-    store = FeedStore()
-
-    # Collect from all subscribed feeds
-    result = await collect(store, concurrency=30, timeout=10.0)
-    print(f"Collected {result.new_articles} new articles from "
-          f"{result.feeds_ok}/{result.feeds_total} feeds in {result.duration_ms:.0f}ms")
-
-    if result.errors:
-        print(f"Errors ({result.feeds_error}):")
-        for err in result.errors:
-            print(f"  {err['feed_url']}: {err['error']}")
-
-    # Full-text search
-    articles = store.search("kubernetes deployment", count=5)
-    for a in articles:
-        print(f"{a.title} ({a.published})")
-        print(f"  {a.url}")
-
-    store.close()
-
-asyncio.run(main())
-```
-
-### Collect only one category
-
-```python
-import asyncio
-from feedkit.core import collect
-from feedkit.storage import FeedStore
-
-async def main():
-    store = FeedStore()
-    result = await collect(store, category="science", concurrency=10)
-    print(f"Science feeds: {result.feeds_ok} OK, {result.new_articles} new articles")
-    store.close()
-
-asyncio.run(main())
-```
-
-### OPML import/export
-
-```python
-from feedkit.storage import FeedStore
-from feedkit.opml import import_opml, export_opml
-
-store = FeedStore()
-
-# Import from another reader
-count = import_opml(store, "my-feeds.opml")
-print(f"Imported {count} feeds")
-
-# Export for backup or sharing
-count = export_opml(store, "backup.opml")
-print(f"Exported {count} feeds")
-
-store.close()
-```
-
-### Get catalog statistics
-
-```python
-from feedkit import get_catalog_stats
-
-stats = get_catalog_stats()
-print(f"Total feeds: {stats['total_feeds']}")
-print("Categories:")
-for cat, n in stats["categories"].items():
-    print(f"  {cat}: {n}")
-print("Languages:")
-for lang, n in stats["languages"].items():
-    print(f"  {lang}: {n}")
-```
-
-### Custom database path
-
-```python
-from feedkit.storage import FeedStore
-
-# Use a project-specific database
-store = FeedStore(db_path="/tmp/my-project-feeds.db")
-store.subscribe("https://example.com/feed.xml", category="project")
-print(f"DB at: {store.db_path}")
-store.close()
-```
-
-### Monitor feed health
-
-```python
-from feedkit.storage import FeedStore
-
-store = FeedStore()
-health = store.get_health()
-for h in health:
-    status = "OK" if h["error_count"] == 0 else f"ERRORS: {h['error_count']}"
-    print(f"[{status}] {h['title'] or h['feed_url']}")
-    if h["last_error"]:
-        print(f"  Last error: {h['last_error']}")
-store.close()
-```
-
-### CLI: JSON output for scripting
 
 ```bash
-# Search catalog with JSON output, pipe to jq
-feedkit search "aws" --json-output | jq '.[].url'
-
-# Chain: subscribe all science feeds, collect, then search
+# CLI: subscribe category, collect, search
 feedkit subscribe-catalog --category science
 feedkit collect --category science
 feedkit find "climate change"
+feedkit search "aws" --json-output | jq '.[].url'
 ```
 
-### MCP: Claude Code configuration
-
-Add to your MCP config (e.g., `~/.claude/config.json`):
-
-```json
-{
-  "mcpServers": {
-    "feedkit": {
-      "command": "feedkit-mcp"
-    }
-  }
-}
-```
-
-Then in Claude Code, the agent can use tools like:
-- `search_feed_catalog(query="machine learning", category="technology")`
-- `subscribe_feed(url="https://arxiv.org/rss/cs.AI")`
-- `collect_feeds()`
-- `search_articles(query="transformer architecture")`
+## Constants
+| constant | value | module |
+|----------|-------|--------|
+| DEFAULT_TIMEOUT | 15.0s | feedkit.core |
+| DEFAULT_CONCURRENCY | 20 | feedkit.core |
+| DEFAULT_DB_PATH | ~/.feedkit/feedkit.db | feedkit.storage |
 
 ## Links
-
-- Docs: https://github.com/QuartzUnit/feedkit
-- PyPI: https://pypi.org/project/feedkit/
-- Source: https://github.com/QuartzUnit/feedkit
-- Issues: https://github.com/QuartzUnit/feedkit/issues
+- [Docs](https://github.com/QuartzUnit/feedkit) | [PyPI](https://pypi.org/project/feedkit/) | [Issues](https://github.com/QuartzUnit/feedkit/issues)

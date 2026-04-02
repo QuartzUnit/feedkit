@@ -1,63 +1,14 @@
 # feedkit
-
-> RSS/Atom feed collection with 444 curated feeds. Python MCP server included.
-
-## Purpose
-
-Collects and manages RSS/Atom feeds with a built-in catalog of 444 curated sources spanning technology, science, finance, society, and academia. Stores subscriptions and articles in a local SQLite database with FTS5 full-text search.
-
-## Capabilities
-
-- **Curated catalog**: 444 verified feeds (tech blogs, journals, government, news) searchable by keyword, category, and language
-- **Feed fetching**: Async HTTP with feedparser, concurrent collection (default 20 workers)
-- **Subscription management**: Subscribe, unsubscribe, bulk subscribe by catalog category
-- **Article storage**: SQLite with FTS5 full-text search across titles, summaries, authors
-- **OPML import/export**: Interoperable with other feed readers via listparser
-- **Category filtering**: Filter feeds and articles by category and language
-
-## Installation
-
-```
-pip install feedkit
-pip install feedkit[mcp]     # + MCP server
-pip install feedkit[opml]    # + OPML import/export
-pip install feedkit[all]     # everything
-```
-
-## Quick Use
-
-### CLI
-
-```bash
-feedkit search "aws" --category technology --language en
-feedkit subscribe https://example.com/feed.xml --category tech
-feedkit subscribe-catalog --category technology
-feedkit collect
-feedkit latest --count 10
-feedkit find "kubernetes"
-feedkit stats
-feedkit categories
-feedkit import-opml feeds.opml
-```
-
-### Python
-
+> RSS/Atom feed collection with 444 curated feeds, SQLite FTS5 storage, MCP server.
+- `pip install feedkit` / `feedkit[mcp]` / `feedkit[opml]` / `feedkit[all]`
+- Python >= 3.11 | deps: feedparser, httpx, click, rich
+- 444 curated feeds (tech/science/finance/society/academia), async concurrent collection
+- SQLite + FTS5 full-text search, OPML import/export, CLI + MCP server
+- Exports: `fetch_feed`, `search_catalog`, `get_catalog_stats`, `FeedStore`
 ```python
 from feedkit import fetch_feed, search_catalog, FeedStore
-
 entries = await fetch_feed("https://example.com/feed.xml", count=10)
 feeds = search_catalog("aws", category="technology", language="en")
-store = FeedStore()
-store.subscribe("https://example.com/feed.xml", category="tech")
+store = FeedStore(); store.subscribe(feeds[0].url, category="tech")
 ```
-
-### MCP
-
-Server: `feedkit` (command: `feedkit-mcp`)
-Tools: `fetch_single_feed`, `search_feed_catalog`, `catalog_stats`, `collect_feeds`, `search_articles`, `get_latest_articles`, `subscribe_feed`, `unsubscribe_feed`, `list_subscriptions`
-
-## Links
-
-- Docs: https://github.com/QuartzUnit/feedkit
-- PyPI: https://pypi.org/project/feedkit/
-- Source: https://github.com/QuartzUnit/feedkit
+- [Docs](https://github.com/QuartzUnit/feedkit) | [PyPI](https://pypi.org/project/feedkit/) | [Full API](/llms-full.txt)
