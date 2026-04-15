@@ -331,3 +331,8 @@ Feeds behind hard paywalls (Bloomberg, FT, WSJ, Barron's) and feeds with aggress
 [MIT](LICENSE)
 
 <!-- mcp-name: io.github.QuartzUnit/feedkit -->
+
+
+---
+
+<sub>Part of the [QuartzUnit](https://github.com/QuartzUnit) ecosystem — composable Python libraries for data collection, extraction, search, and AI agent safety.</sub>

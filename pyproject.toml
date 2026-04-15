@@ -40,6 +40,8 @@ feedkit-mcp = "feedkit.mcp_server:main"
 Homepage = "https://github.com/QuartzUnit/feedkit"
 Repository = "https://github.com/QuartzUnit/feedkit"
 Issues = "https://github.com/QuartzUnit/feedkit/issues"
+Documentation = "https://github.com/QuartzUnit/feedkit#readme"
+Changelog = "https://github.com/QuartzUnit/feedkit/releases"
 
 [tool.setuptools.package-data]
 feedkit = ["data/*.json"]
